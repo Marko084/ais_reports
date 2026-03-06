@@ -1,0 +1,57 @@
+﻿.gridview-header
+{
+    /* display:none; */
+    font-weight:bold;
+    text-align: center;
+    font-size:14pt;
+}
+        
+.gridview-row
+{
+    font-size:16px;
+}
+.gridview-alt-row
+{
+    font-size:16px;
+}
+.gridview-table {
+    width:60%;
+    border-collapse:collapse;
+    border:1px solid #fff;
+}
+
+.gridview-first-column-body {
+	
+}
+
+.gridview-first-column-footer {
+	
+}
+
+.report-title
+{
+    font-size: 24px;
+    font-family:Calibri, Arial;
+}
+
+.report-sub-title 
+{
+     font-size: 18px;
+    font-family:Calibri, Arial;
+}
+
+.report-parameters 
+{
+    font-size: 16px;
+    font-family:Calibri, Arial;
+}
+
+.grid-labels 
+{
+    font-size:24px;
+    font-family:Calibri, Arial;
+    font-weight:bold;
+    display:block;
+    padding:10px 10px 10px 0px;
+    
+}

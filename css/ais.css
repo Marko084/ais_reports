@@ -1,0 +1,491 @@
+body
+{
+	background-image:url('../images/asi_bkgd.jpg');
+	background-repeat:repeat-x;
+	background-position:left top;
+	height:110%;
+	text-align:center;
+}
+
+#BodyArea
+{
+	width:708px;
+	text-align:center;
+	margin: 0 auto;
+}
+
+#Bullet1
+{
+	width:342px;
+	height:53px;
+	background-image:url('../images/bullet1.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Bullet2
+{
+	width:365px;
+	height:53px;
+	background-image:url('../images/bullet2.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Bullet3
+{
+	width:342px;
+	height:30px;
+	background-image:url('../images/bullet3.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Bullet4
+{
+	width:365px;
+	height:30px;
+	background-image:url('../images/bullet4.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#BulletBottom
+{
+	width:707px;
+}
+
+#BulletTop
+{
+	width:707px;
+}
+
+#ButtonArea
+{
+	width:707px;
+}
+
+#ButtonLeft
+{
+	height:56px;
+	width:215px;
+	background-image:url('../images/login_photo_lcorner.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#ButtonMiddle
+{
+	height:56px;
+	width:260px;
+	background-image:url('../images/login_button.jpg');
+	background-repeat:no-repeat;
+	float:left;
+	cursor:hand;
+}
+
+#ButtonRight
+{
+	height:56px;
+	width:232px;
+	background-image:url('../images/login_photo_rcorner.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+.chartsArea
+{
+	float:left;
+	font-family:Tahoma, Arial;
+	font-size:10pt;
+	font-weight:bold;
+	
+}
+#FooterArea
+{
+	width:707px;
+}
+
+#FooterLeft
+{
+	height:83px;
+	width:238px;
+	background-image:url('../images/contact_left.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#FooterMiddle
+{
+	height:83px;
+	width:228px;
+	background-image:url('../images/contact_us.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#FooterRight
+{
+	height:83px;
+	width:241px;
+	background-image:url('../images/contact_right.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#ImageArea
+{
+	width:707px;
+}
+
+#Main
+{
+	width:707px;
+}
+#PageTitle
+{
+	font-family:Tahoma, Arial;
+	font-size:12pt;
+	font-weight:bold;
+}
+#Photo1
+{
+	height:279px;
+	width:78px;
+	background-image:url('../images/login_photo1.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+#Photo2
+{
+	height:279px;
+	width:72px;
+	background-image:url('../images/login_photo2.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo3
+{
+	height:279px;
+	width:73px;
+	background-image:url('../images/login_photo3.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo4
+{
+	height:279px;
+	width:64px;
+	background-image:url('../images/login_photo4.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo5
+{
+	height:279px;
+	width:64px;
+	background-image:url('../images/login_photo5.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo6
+{
+	height:279px;
+	width:64px;
+	background-image:url('../images/login_photo6.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo7
+{
+	height:279px;
+	width:60px;
+	background-image:url('../images/login_photo7.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo8
+{
+	height:279px;
+	width:62px;
+	background-image:url('../images/login_photo8.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo9
+{
+	height:279px;
+	width:63px;
+	background-image:url('../images/login_photo9.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo10
+{
+	height:279px;
+	width:49px;
+	background-image:url('../images/login_photo10.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo11
+{
+	height:279px;
+	width:58px;
+	background-image:url('../images/login_photo11.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#SpacerArea
+{
+	width:707px;
+}
+
+#SpacerLeft
+{
+	height:50px;
+	width:215px;
+	background-image:url('../images/spacer_left.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#SpacerMiddle
+{
+	height:50px;
+	width:260px;
+	background-image:url('../images/spacer_middle.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#SpacerRight
+{
+	height:50px;
+	width:232px;
+	background-image:url('../images/spacer_right.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#TopBar
+{
+	height:1px;
+	background-image:url('../images/top_bkgd.jpg');
+	background-repeat:repeat;
+}
+
+#TopLeft
+{
+	height:70px;
+	width:113px;
+	background-image:url('../images/asi_logo.jpg');
+	background-repeat:no-repeat;
+	float:left;
+	
+}
+
+#TopMiddle
+{
+	height:70px;
+	width:487px;
+	background-image:url('../images/asi_title.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#TopRight
+{
+	height:70px;
+	width:107px;
+	background-image:url('../images/right_top_corner.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#WelcomeArea
+{
+	width:707px;
+}
+
+#WelcomeLeft
+{
+	height:55px;
+	width:215px;
+	background-image:url('../images/welcome_left.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#WelcomeMiddle
+{
+	height:55px;
+	width:260px;
+	background-image:url('../images/welcome.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#WelcomeRight
+{
+	height:55px;
+	width:232px;
+	background-image:url('../images/welcome_right.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+#header
+{
+	height:80px;
+	width:100%;
+	background-image:url(../images/pageheaderbkgd.jpg); 
+	background-repeat:repeat-x;
+}
+.collapsePanelHeader
+{
+	
+}
+.collapsePanel
+{
+	float:left;
+}
+
+.collapsePanelHeaderLeft
+{
+	float:left;
+	height:37px;
+	width:19px;
+	background-image:url(../images/pnlheadleftbkgd.jpg); 
+	background-repeat:no-repeat;
+}
+
+.collapsePanelHeaderTitle
+{
+	padding-top:6px;
+	float: left; 
+	height:37px;
+	background-image:url(../images/pnlheadmidbkgd.jpg); 
+	background-repeat:repeat-x;
+	font-family:Arial,Tahoma;
+	font-size:10px;
+	font-weight:bold;
+	color:#383f49;
+}
+.collapsePanelHeaderDescription
+{
+	float:left; 
+	height:37px; 
+	background-image:url(../images/pnlheadmidbkgd.jpg); 
+	background-repeat:repeat-x;
+}
+
+.collapsePanelHeaderRight
+{
+	padding-top:7px;
+	float:left;
+	height:37px;
+	width:22px;
+	background-image:url(../images/pnlheadrightbkgd.jpg); 
+	background-repeat:no-repeat;
+}
+
+#reportArea
+{
+	width:100%;
+}
+
+#PageHeader
+{
+	float:left;
+	width:100%;
+	height:80px;
+	background-image:url(../images/pageheaderbkgd.jpg); 
+	background-repeat:repeat-x;
+}
+
+#searchCriteriaArea
+{
+	float:left;
+	width:210px;
+	height:525px;
+}
+
+#reportArea
+{
+	float:left;
+	width:550px;
+	/*height:300px; */
+}
+
+#chart1Area
+{
+	float:left;
+	width:200px;
+	/*height:300px; */
+}
+#chart2Area
+{
+	float:left;
+	width:200px;
+	/*height:300px; */
+}
+#chart3Area
+{
+	float:left;
+	width:200px;
+	/*height:300px;*/
+}
+
+#headerLogoArea
+{
+	float:left;
+	padding-left:15px;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #ffff99;
+	color: black;
+	padding: 1px;
+	font-family: Tahoma, Arial;
+	font-size:12px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+	padding : 1px;
+	font-family: Tahoma, Arial;
+	font-size:12px;
+}
+
+.autocomplete_completionListElement 
+{  
+	/* margin : 0px!important;
+	background-color : inherit;
+	color : windowtext;
+	border : buttonshadow; */
+	/* border-width : 1px;
+	border-style : solid; */
+	/* cursor : 'default';
+	overflow : auto;
+	height : 200px; 
+    text-align : left; 
+    list-style-type : none;*/
+    font-family: Tahoma, Arial;
+	font-size:12px;
+}

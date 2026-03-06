@@ -1,0 +1,30 @@
+<chart>
+  <chart_type>bar</chart_type>
+  <chart_data>
+    <row>
+      <null/>
+      <string>Excellent</string>
+      <string>Very Good</string>
+      <string>Good</string>
+      <string>Fair</string>
+      <string>Poor</string>
+    </row>
+    <row>
+      <string>Surveyor</string>
+      <number>5</number>
+    </row>
+    <row>
+      <string>CSR</string>
+      <number>6</number>
+    </row>
+    <row>
+      <string>Origin</string>
+      <number>7</number>
+    </row>
+    <row>
+      <string>Destination</string>
+      <number>8</number>
+    </row>
+
+  </chart_data>
+</chart>

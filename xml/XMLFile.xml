@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<vc:Chart xmlns:vc='clr-namespace:Visifire.Charts;assembly=Visifire.Charts' BorderThickness='0' Theme='Theme1' View3D='True'>
+  <vc:Title Text='Questions Breakdown By Region'/>
+  <vc:DataSeries Name='Avg. Rating' RenderAs='Line'>
+    <vc:DataPoint AxisLabel='Please rate the representative who established and coordinated the needed services of your relocation.' YValue='4.3'/>
+    <vc:DataPoint AxisLabel='If Atlas packed your possessions in cartons please rate the crew that provided the packing services.' YValue='3.7'/>
+    <vc:DataPoint AxisLabel='Please rate the professionalism of the van operator who transported the goods to the destination address.' YValue='5'/>
+    <vc:DataPoint AxisLabel='Please rate your overall satisfaction of all relocation services provided.' YValue='4.3'/>
+    <vc:DataPoint AxisLabel='Please rate your satisfaction with the van operator who transported your goods to the destination address.' YValue='5'/>
+  </vc:DataSeries>
+
+  </vc:DataSeries>
+</vc:Chart>

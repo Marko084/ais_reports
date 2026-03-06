@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SurveyMaps>
+  <Company Name="NW" CompanyID="1">
+    <CompanyId>1</CompanyId>
+    <DeliveryDate>datedel</DeliveryDate>
+    <CompletionDate>datecomp</CompletionDate>
+    <CSCNo>cscno</CSCNo>
+    <LastName>lastresp</LastName>
+    <FirstName>firstresp</FirstName>
+    <OriginAgent>agentorig</OriginAgent>
+    <DestinationAgent>agentdest</DestinationAgent>
+    <DriverName>driver</DriverName>
+    <ClientName>nameclient</ClientName>
+    <CustomerServiceRep>namecsr</CustomerServiceRep>
+    <NationalAcctNo>nataccno</NationalAcctNo>
+    <LocationCode>loccode</LocationCode>
+	  <HaulerCode>hauler</HaulerCode>
+	  <StorageCode>storage</StorageCode>
+    <BookerNo>booker</BookerNo>
+    <Question>question</Question>
+    <QuestionID>0</QuestionID>
+    <Answer>answer</Answer>
+    <ShipOriginCity>shporgcty</ShipOriginCity>
+    <ShipOriginState>shporgst</ShipOriginState>
+    <ShipDestinationCity>shpdstcty</ShipDestinationCity>
+    <ShipDestinationState>shpdstst</ShipDestinationState>
+	  <KPICode>kpi</KPICode>
+    <RegistrationNumber>regno</RegistrationNumber>
+    <PhoneNumber>phonehome</PhoneNumber>
+    <parentcompany>parent</parentcompany>
+    <pickupdriver>driverpick</pickupdriver>
+    <packdriver>driverpack</packdriver>
+  </Company>
+	<Company name="NW_Military" companyid="10004">
+		<companyid>10004</companyid>
+		<deliverydate>datedel</deliverydate>
+		<completiondate>datecomp</completiondate>
+		<cscno>cscno</cscno>
+		<lastname>lastresp</lastname>
+		<firstname>firstresp</firstname>
+		<originagent>agentorig</originagent>
+		<destinationagent>agentdest</destinationagent>
+		<drivername>driver</drivername>
+		<clientname>nameclient</clientname>
+		<customerservicerep>namecsr</customerservicerep>
+		<nationalacctno>nataccno</nationalacctno>
+		<locationcode>loccode</locationcode>
+		<haulercode>hauler</haulercode>
+		<storagecode>storage</storagecode>
+		<bookerno>booker</bookerno>
+		<question>question</question>
+		<questionid>0</questionid>
+		<answer>answer</answer>
+		<shiporigincity>shporgcty</shiporigincity>
+		<shiporiginstate>shporgst</shiporiginstate>
+		<shipdestinationcity>shpdstcty</shipdestinationcity>
+		<shipdestinationstate>shpdstst</shipdestinationstate>
+		<kpicode>kpi</kpicode>
+	</Company>
+  <Company Name="Demo" CompanyID="10000">
+    <CompanyId>10000</CompanyId>
+    <DeliveryDate>datedel</DeliveryDate>
+    <CompletionDate>datecomp</CompletionDate>
+    <CSCNo>cscno</CSCNo>
+    <LastName>lastresp</LastName>
+    <FirstName>firstresp</FirstName>
+    <OriginAgent>agentorig</OriginAgent>
+    <DestinationAgent>agentdest</DestinationAgent>
+    <DriverName>driver</DriverName>
+    <ClientName>nameclient</ClientName>
+    <CustomerServiceRep>namecsr</CustomerServiceRep>
+    <NationalAcctNo>nataccno</NationalAcctNo>
+    <LocationCode>loccode</LocationCode>
+    <HaulerCode>hauler</HaulerCode>
+    <StorageCode>storage</StorageCode>
+    <BookerNo>booker</BookerNo>
+    <Question>question</Question>
+    <QuestionID>0</QuestionID>
+    <Answer>answer</Answer>
+    <ShipOriginCity>shporgcty</ShipOriginCity>
+    <ShipOriginState>shporgst</ShipOriginState>
+    <ShipDestinationCity>shpdstcty</ShipDestinationCity>
+    <ShipDestinationState>shpdstst</ShipDestinationState>
+    <KPICode>kpi</KPICode>
+  </Company>
+	<Company name="Daniels" companyid="10001">
+		<companyid>10001</companyid>
+		<deliverydate>datedel</deliverydate>
+		<completiondate>datecomp</completiondate>
+		<registrationnumber>cscno</registrationnumber>
+		<responderlastname>lastresp</responderlastname>
+		<responderfirstname>firstresp</responderfirstname>
+		<invoicenumber>invoice</invoicenumber>
+		<originagentcode>agentorig</originagentcode>
+		<destinationagentcode>agentdest</destinationagentcode>
+		<drivername>driver</drivername>
+		<clientname>nameclient</clientname>
+		<customerservicerep>namecsr</customerservicerep>
+		<bookernumber>booker</bookernumber>
+		<question>question</question>
+		<questionid>0</questionid>
+		<answer>answer</answer>
+		<salesman>salesman</salesman>
+	</Company>
+	<Company name="DMS" companyid="10002">
+		<companyid datatype="int" nullallowed="no">10002</companyid>
+		<deliverydate datatype="datetime" nullallowed="yes">datedel</deliverydate>
+		<completiondate>datecomp</completiondate>
+		<cscno datatype="varchar" length="255" nullallowed="yes">cscno</cscno>
+		<lastname datatype="varchar" length="50" nullallowed="yes">lastresp</lastname>
+		<firstname datatype="varchar" length="50" nullallowed="yes">firstresp</firstname>
+		<originagent datatype="varchar" length="10" nullallowed="yes">agentorig</originagent>
+		<destinationagent datatype="varchar" length="10" nullallowed="yes">agentdest</destinationagent>
+		<drivername datatype="varchar" length="50" nullallowed="yes">driver</drivername>
+		<clientname datatype="varchar" length="50" nullallowed="yes">nameclient</clientname>
+		<customerservicerep datatype="varchar" length="50" nullallowed="yes">namecsr</customerservicerep>
+		<nationalacctno datatype="varchar" length="50" nullallowed="yes">nataccno</nationalacctno>
+		<locationcode datatype="varchar" length="10" nullallowed="yes">loccode</locationcode>
+		<bookerno datatype="varchar" length="10" nullallowed="yes">booker</bookerno>
+		<storage>storage</storage>
+		<question datatype="varchar" length="512" nullallowed="yes">question</question>
+		<questionid datatype="int" nullallowed="no">0</questionid>
+		<answer datatype="varchar" length="512" nullallowed="yes">answer</answer>
+		<shiporigincity>shporgcty</shiporigincity>
+		<shiporiginstate>shporgst</shiporiginstate>
+		<shipdestinationcity>shpdstcty</shipdestinationcity>
+		<shipdestinationstate>shpdstst</shipdestinationstate>
+		<kpicode>kpi</kpicode>
+	</Company>
+	<Company name="Atlas_Military" companyid="10005">
+		<companyid>10005</companyid>
+		<deliverydate>datedel</deliverydate>
+		<completiondate>datecomp</completiondate>
+		<cscno>cscno</cscno>
+		<lastname>lastresp</lastname>
+		<firstname>firstresp</firstname>
+		<originagent>agentorig</originagent>
+		<destinationagent>agentdest</destinationagent>
+		<drivername>driver</drivername>
+		<clientname>nameclient</clientname>
+		<customerservicerep>namecsr</customerservicerep>
+		<nationalacctno>nataccno</nationalacctno>
+		<locationcode>loccode</locationcode>
+		<haulercode>hauler</haulercode>
+		<storagecode>storage</storagecode>
+		<bookerno>booker</bookerno>
+		<question>question</question>
+		<questionid>0</questionid>
+		<answer>answer</answer>
+		<shiporigincity>shporgcty</shiporigincity>
+		<shiporiginstate>shporgst</shiporiginstate>
+		<shipdestinationcity>shpdstcty</shipdestinationcity>
+		<shipdestinationstate>shpdstst</shipdestinationstate>
+		<kpicode>kpi</kpicode>
+		<userfield1>SCAC</userfield1>
+	</Company>
+	<Company name="Default" companyid="999999">
+		<companyid>999999</companyid>
+		<deliverydate>datedel</deliverydate>
+		<completiondate>datecomp</completiondate>
+		<cscno>cscno</cscno>
+		<lastname>lastresp</lastname>
+		<firstname>firstresp</firstname>
+		<originagent>agentorig</originagent>
+		<destinationagent>agentdest</destinationagent>
+		<drivername>driver</drivername>
+		<clientname>nameclient</clientname>
+		<customerservicerep>namecsr</customerservicerep>
+		<nationalacctno>nataccno</nationalacctno>
+		<locationcode>loccode</locationcode>
+		<haulercode>hauler</haulercode>
+		<storagecode>storage</storagecode>
+		<bookerno>booker</bookerno>
+		<question>question</question>
+		<questionid>0</questionid>
+		<answer>answer</answer>
+		<shiporigincity>shporgcty</shiporigincity>
+		<shiporiginstate>shporgst</shiporiginstate>
+		<shipdestinationcity>shpdstcty</shipdestinationcity>
+		<shipdestinationstate>shpdstst</shipdestinationstate>
+		<kpicode>kpi</kpicode>
+	</Company>
+</SurveyMaps>

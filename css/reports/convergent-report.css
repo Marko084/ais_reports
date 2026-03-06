@@ -1,0 +1,128 @@
+﻿.gridview-header
+{
+    /* display:none; */
+    font-weight:bold;
+    font-size:14pt;
+    font-family: Calibri, Arial, Verdana;
+    color:#fff;
+    background-color:#272727;
+    /*text-align:left;*/
+     padding:10px; 
+    /*white-space:nowrap;*/
+    
+}
+
+.gridvew-header th {
+     margin:7px !important;
+     border: 1px solid #000 !important;
+}
+        
+.gridview-row
+{
+    font-size:12pt;
+     /* padding:10px; 
+    color:#444444; */
+    text-align:center;
+    /*white-space:nowrap;*/
+    background-color:#fff;
+    border: 1px solid #000;
+}
+
+.gridview-alt-row
+{
+   font-size:12pt;
+   /* padding:10px;
+   color:#444444; */
+   text-align:center;
+   /*white-space:nowrap;*/
+}
+.gridview-table 
+{
+    margin-top:15px;
+    width:2600px;
+    border-collapse:collapse;
+    /*table-layout:fixed;*/
+    border:1px solid #000;
+}
+
+.gridview-row td:nth-child(7) {
+    width: 200px !important;
+}
+
+.gridview-alt-row td:nth-child(7) {
+    width: 200px !important;
+}
+
+.gridview-header th:nth-child(7) {
+    width: 200px !important;
+}
+
+#report-section br { display:none;}
+
+.gridview-first-column-body {
+  /* text-align:left;
+  white-space:nowrap; */
+}
+
+.gridview-first-column-body a{
+  color:#000;
+}
+
+.gridview-first-column-body td 
+{
+    /* padding-left:30px; */
+}
+
+.gridview-first-column-footer {
+	
+}
+
+.gridview-footer 
+{
+    display: none;
+    /* border-bottom: 1px solid #000; */
+}
+
+.report-header 
+{
+    padding:10px;
+    background-color:#fff;
+    color:#002d64;
+    height:105px;
+}
+
+.report-title
+{
+    font-size: 32pt;
+    font-family:Calibri, Arial, Verdana;
+}
+
+.report-sub-title 
+{
+    font-size: 24pt;
+    font-family:Calibri, Arial;
+    margin-top:20px;
+}
+
+.report-parameters {
+    font-size: 16pt;
+    font-family: Calibri, Arial;
+    margin-top: 10px;
+}
+
+.report-spacer {
+    background-color:#fff;
+    height:25px;
+    display:block;
+}
+
+.grid-labels 
+{
+    font-size:22pt;
+    font-family:Calibri, Arial;
+    font-weight:bold;
+    display:block;
+    padding:10px 10px 10px 0px;
+    
+}
+

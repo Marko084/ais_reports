@@ -1,0 +1,52 @@
+﻿.accordionHeader
+{
+    background-image:url('../images/FieldListHeader.png');
+    background-repeat:no-repeat;
+    height:30px;
+    width:240px;
+    padding-bottom:3px;
+    padding-top:5px;
+    font-family:Arial;
+    text-indent:20px;
+    color:#ffffff;
+    font-weight:bold;
+    cursor:hand;
+}
+
+.accordionHeaderSelected
+{
+    background-image:url('../images/FieldListHeaderOver.png');
+    background-repeat:no-repeat;
+    height:30px;
+    width:240px;
+    padding-bottom:3px;
+    font-family:Arial;
+    padding-top:5px;
+    text-indent:20px;
+    color:#ffffff;
+    font-weight:bold;
+    cursor:hand;
+}
+
+fieldset
+{
+  padding: 1em;
+  font-family:Arial;
+  font-size:12px;
+  
+}
+
+.fieldItem
+{
+  cursor:hand;
+  list-style-type:none;
+}
+
+li:hover
+{
+    background-image:url('../images/FieldItemOver.png');
+    background-repeat:no-repeat;
+    height:24px;
+    width:200px;
+    color:#ffffff;
+}

@@ -1,0 +1,90 @@
+﻿<chart showlegend="1" legendshadow="0" legendborderalpha="0" numberprefix="$" theme="ais" useplotgradientcolor="0" showplotborder="0" showshadow="0" bgcolor="#000000" palette="3" basefontcolor="#ffffff" >
+
+  <categories>
+    <category label="January" />
+    <category label="February" />
+    <category label="March" />
+    <category label="April" />
+    <category label="May" />
+    <category label="June" />
+    <category label="July" />
+    <category label="August" />
+    <category label="September" />
+    <category label="October" />
+    <category label="November" />
+    <category label="December" />
+    <category label="January" />
+    <category label="February" />
+    <category label="March" />
+    <category label="April" />
+    <category label="May" />
+    <category label="June" />
+    <category label="July" />
+    <category label="August" />
+    <category label="September" />
+    <category label="October" />
+    <category label="November" />
+    <category label="December" />
+    <category label="January" />
+    <category label="February" />
+    <category label="March" />
+    <category label="April" />
+    <category label="May" />
+    <category label="June" />
+    <category label="July" />
+    <category label="August" />
+    <category label="September" />
+    <category label="October" />
+    <category label="November" />
+    <category label="December" />
+    <category label="January" />
+    <category label="February" />
+  </categories>
+
+  <dataset seriesname='2014'>
+    <set label='300' value='300'/>
+    <set label='249' value='249'/>
+    <set label='279' value='279'/>
+    <set label='387' value='387'/>
+    <set label='428' value='428'/>
+    <set label='433' value='433'/>
+    <set label='404' value='404'/>
+    <set label='313' value='313'/>
+    <set label='264' value='264'/>
+    <set label='277' value='277'/>
+    <set label='224' value='224'/>
+    <set label='415' value='415'/>
+  </dataset>
+  <dataset seriesname='2015'>
+    <set label='460' value='460'/>
+    <set label='417' value='417'/>
+    <set label='551' value='551'/>
+    <set label='643' value='643'/>
+    <set label='714' value='714'/>
+    <set label='739' value='739'/>
+    <set label='537' value='537'/>
+    <set label='455' value='455'/>
+    <set label='380' value='380'/>
+    <set label='450' value='450'/>
+    <set label='406' value='406'/>
+    <set label='397' value='397'/>
+  </dataset>
+  <dataset seriesname='2016'>
+    <set label='409' value='409'/>
+    <set label='395' value='395'/>
+    <set label='467' value='467'/>
+    <set label='523' value='523'/>
+    <set label='655' value='655'/>
+    <set label='847' value='847'/>
+    <set label='462' value='462'/>
+    <set label='454' value='454'/>
+    <set label='374' value='374'/>
+    <set label='456' value='456'/>
+    <set label='379' value='379'/>
+    <set label='356' value='356'/>
+  </dataset>
+  <dataset seriesname='2017'>
+    <set label='426' value='426'/>
+    <set label='391' value='391'/>
+  </dataset>
+</chart>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Employee>
+  <Record>
+    <EmpID>E1</EmpID>
+    <EmpName>Sudipta</EmpName>
+    <EmpAge>29</EmpAge>
+    <EmpSex>M</EmpSex>
+    <EmpAddress>Kolkata</EmpAddress>
+    <Department>
+      <DeptID>D1</DeptID>
+      <EmpID>E1</EmpID>
+      <DeptName>Sales</DeptName>
+    </Department>
+  </Record>
+  <Record>
+    <EmpID>E2</EmpID>
+    <EmpName>Chiranjib</EmpName>
+    <EmpAge>26</EmpAge>
+    <EmpSex>M</EmpSex>
+    <EmpAddress>Kolkata</EmpAddress>
+    <Department>
+      <DeptID>D1</DeptID>
+      <EmpID>E2</EmpID>
+      <DeptName>Sales</DeptName>
+    </Department>
+  </Record>
+  <Record>
+    <EmpID>E3</EmpID>
+    <EmpName>Nilanjan</EmpName>
+    <EmpAge>29</EmpAge>
+    <EmpSex>M</EmpSex>
+    <EmpAddress>Kolkata</EmpAddress>
+    <Department>
+      <DeptID>D2</DeptID>
+      <EmpID>E3</EmpID>
+      <DeptName>Finance</DeptName>
+    </Department>
+  </Record>
+  <Record>
+    <EmpID>E4</EmpID>
+    <EmpName>Chayan</EmpName>
+    <EmpAge>30</EmpAge>
+    <EmpSex>M</EmpSex>
+    <EmpAddress>Kolkata</EmpAddress>
+    <Department>
+      <DeptID>D3</DeptID>
+      <EmpID>E4</EmpID>
+      <DeptName>Human Resource</DeptName>
+    </Department>
+  </Record>
+  <Record>
+    <EmpID>E5</EmpID>
+    <EmpName>Biplab</EmpName>
+    <EmpAge>31</EmpAge>
+    <EmpSex>M</EmpSex>
+    <EmpAddress>Kolkata</EmpAddress>
+    <Department>
+     <DeptID>D4</DeptID>
+      <EmpID>E5</EmpID>
+      <DeptName>Administration</DeptName>
+    </Department>
+  </Record>
+</Employee>
+
+

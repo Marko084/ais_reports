@@ -1,0 +1,47 @@
+<chart>
+<chart_type>stacked 3d column</chart_type>
+
+ <chart_data>
+    <row>
+      <null/>
+      <string>Excellent</string>
+      <string>Very Good</string>
+      <string>Good</string>
+      <string>Fair</string>
+      <string>Poor</string>
+    </row><row>
+      <string>Region A</string>
+      <number>5</number>
+    </row>
+      <row>
+         <string>Region B</string>
+         <number>40</number>
+      </row>
+      <row>
+         <string>Region C</string>
+         <number>56</number>
+      </row>
+   </chart_data>
+   
+   <!--<chart_type>
+      <string>line</string>
+      <string>column</string>
+      <string>column</string>
+   </chart_type>-->
+
+<chart_transition type='scale' delay='.5' duration='0.5' order='category' />
+<chart_type>bar</chart_type>
+
+
+
+   
+   
+   <!-- explode the 1st and 3rd wedges -->
+   <!--<series_explode>
+      <number>20</number>
+      <number>0</number>
+      <number>70</number>
+   </series_explode>-->
+
+
+</chart>

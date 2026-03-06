@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Companies>
+  <Company Id="10001" Name="Daniels">
+    <Fields>
+      <Field Name="CompletionStartDate" Label="AIS Completion Start Date" ControlType="TextBox" DataType="DateTime" Maxlength="10" />
+      <Field Name="CompletionEndDate" Label="AIS Completion End Date" ControlType="TextBox" DataType="DateTime" Maxlength="10" />
+      <Field Name="DeliveryStartDate" Label="Delivery Start Date" ControlType="TextBox" DataType="DateTime" Maxlength="10" />
+      <Field Name="DeliveryEndDate" Label="Delivery End Date" ControlType="TextBox" DataType="DateTime" Maxlength="10" />
+      <Field Name="CompletionStartDate" Label="AIS Completion Start Date" ControlType="TextBox" DataType="DateTime" Maxlength="10" />
+    </Fields>
+  </Company>
+</Companies>

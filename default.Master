@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="AISReports._default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Audit & Information Services - Reports</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+    <!--<script type="text/javascript" src="script/jquery-1.6.2.min.js"></script>-->
+    <link rel="stylesheet" href="css/dark-hive/jquery-ui-1.9.0.custom.css" type="text/css" media="screen" />
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>-->
+    <!--<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>-->
+    <style type="text/css">
+        body { font-family: Calibri, Verdana, Arial; }
+        .wrapper { margin: auto;}
+        .login { background: transparent;}
+        .body-wrapper{width:1020px;float:none;margin-left:auto;margin-right:auto;}
+        .login-box{margin: 50px auto 0;background-color: #f5f5f5;}
+        .shadow {box-shadow: 0 0 6px 0 #fff;-moz-box-shadow: 0 0 6px 0 #fff;-webkit-box-shadow: 0 0 6px 0 #fff;}
+        .header {height: 80px;
+                 background-repeat: repeat-x;
+                 padding: 12px;
+                 background-color: #373737;}
+        .header-text {color: #fff;
+                    font-size: 40pt;
+                    font-weight: normal;
+                    position: relative;
+                     top: -17px;}
+        .sign-in-text {font-size: 24pt; color: #373737;padding:5px 0px 5px 0px;display:block;text-align:left;}
+        .welcome-text {color: #000;padding:0px 0px 5px 0px;display:block;text-align:left;}
+        .sign-in {padding:0px 0px 0px 12px;}
+        .loginStyle table tr td {text-align:left; width: 210px !important;}
+        .loginStyle table tr td input { width: 230px;
+                                        padding: 8px 5px;
+                                        border: 1px solid #999;
+                                        border-radius: 4px;
+                                        -moz-border-radius: 4px;
+                                        -webkit-border-radius: 4px;}
+        .loginStyle table tr td label {color:#000; font-weight:bold;}
+        .loginStyle table tr td {padding:3px;}
+        #ctl00_ContentPlaceHolder1_Login1_LoginButton {width: 140px !important; cursor:pointer;
+        padding: 8px 5px;
+        border: 1px solid #999;
+        background-color: #8e3c3e;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -webkit-box-shadow: 0 1px 3px #999;
+        box-shadow: 0 1px 3px #999;
+        color:#fff; font-weight:bold; font-size:12pt;}
+        .loginButtonStyle {width: 140px !important; cursor:pointer;
+        padding: 8px 5px;
+        border: 1px solid #999;
+        background-color: #8e3c3e;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -webkit-box-shadow: 0 1px 3px #999;
+        box-shadow: 0 1px 3px #999;
+        color:#fff; font-weight:bold; font-size:12pt;}
+        /* .background-wrapper { margin:auto; width:100%; height:100%; background-color:#fff; } */
+
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $.fn.dataTable.moment( 'MM/DD/YYYY' );
+            $("#ctl00_ContentPlaceHolder1_Login1_UserName").focus();
+        });
+    </script>
+</head>
+<body leftmargin="0" topmargin="0" class="ui-widget-content" style="border: 1px solid transparent !important;">
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <div class="wrapper login">
+            <div class="body-wrapper">
+                <div class="login-box shadow">
+                    <div class="header">
+                        <img id="imgLogo" src="images/logo_noback.png" height="70" width="83" alt="" />
+                        <span class="header-text">AIS Reporting</span>
+                    </div>
+                    <div class="sign-in">
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" OnInit="ContentPlaceHolder1_Init">
+                        </asp:contentplaceholder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

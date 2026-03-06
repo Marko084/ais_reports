@@ -1,0 +1,22 @@
+﻿body { font-family: Calibri, Verdana, Arial; background: #ccc;}
+.grid-title {background-color:#444444;}
+.grid-title span {font-family: Calibri, Verdana, Arial; font-size: 14pt; color:#ffffff; text-align:left; display:inline-block; padding:4px 0px 4px 7px;}
+.grid-header {background:#272425; border-bottom: 1px solid #272425;}
+.grid-header a {text-decoration:none; color:#fff; font-weight:normal;}
+.grid-row {background: #ccc;}
+.grid .alt-row { background: #fcfcfc url(images/grd_alt.png) repeat-x top; }
+.grid {width: 100%; background-color: #fff; margin: 5px 0 10px 0;border: solid 1px #525252; border-collapse:collapse;  }
+.grid td {padding: 2px; border: solid 1px #c1c1c1; color: #717171;}
+.grid th {text-align:left; padding: 4px 2px; color: #fff; background: #424242 url(images/grd_head.png) repeat-x top; border-left: solid 1px #525252; font-size: 0.9em; }
+.grid th a { color:#fff; font-size: 0.9em; text-decoration:none; }
+.grid .pager { background: #424242 url(images/grd_pgr.png) repeat-x top; } 
+.grid .pager table { margin: 5px 0; }
+.grid .pager td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }
+.grid .pager a { color: #666; text-decoration: none; }
+.grid .pager a:hover { color: #000; text-decoration: none; }
+
+.pager { background: #424242 url(images/grd_pgr.png) repeat-x top; } 
+.pager table td a { color: #666; text-decoration: none; }
+.pager table td a:hover { color: #000; text-decoration: none; }
+.pager table td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }
+/*style="padding:10px;font-family:Arial; font-size:12px;"*/

@@ -1,0 +1,43 @@
+﻿body{ margin:0; padding:0; line-height: 1.5em; }
+
+#header {
+/* height: 10px; */ /*Height of top section*/
+}
+
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin: 0 25% 0 25%; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 25%; /*Width of left column in percentage*/
+margin-left: -100%;
+}
+
+#rightcolumn{
+float: left;
+width: 25%; /*Width of right column in pixels*/
+margin-left: -25%; /*Set margin to that of -(RightColumnWidth)*/
+
+}
+
+#footer{
+clear: left; 
+width: 95%;
+/* background: black; */
+/*color: #FFF;*/
+/* text-align: center; */
+padding: 0px 0;
+height: 0px;
+}
+
+.innerwrapper{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}

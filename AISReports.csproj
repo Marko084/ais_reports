@@ -1,0 +1,2820 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B9D7550-02AB-4F2B-BB1F-0BF994B55E6C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AISReports</RootNamespace>
+    <AssemblyName>AISReports</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AISLibrary">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\AISLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.4.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.14.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\NReco.PdfGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.31.1789.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Reporting">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Select.HtmlToPdf, Version=2.4.0.1, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\Select.HtmlToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Twilio, Version=5.53.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\AIS\bin\Twilio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".vs\AISReports\v17\HierarchyCache.v1.txt" />
+    <Content Include="AISData.asmx" />
+    <Content Include="AISRest.svc" />
+    <Content Include="AISWS.asmx" />
+    <Content Include="bin\AISReports.dll" />
+    <Content Include="bin\AISReports.pdb" />
+    <Content Include="Chart.aspx" />
+    <Content Include="charts\charts.swf" />
+    <Content Include="charts\charts_library\arno.swf" />
+    <Content Include="charts\charts_library\arst.swf" />
+    <Content Include="charts\charts_library\brfl.swf" />
+    <Content Include="charts\charts_library\brno.swf" />
+    <Content Include="charts\charts_library\brst.swf" />
+    <Content Include="charts\charts_library\cl3d.swf" />
+    <Content Include="charts\charts_library\clfl.swf" />
+    <Content Include="charts\charts_library\clno.swf" />
+    <Content Include="charts\charts_library\clp3.swf" />
+    <Content Include="charts\charts_library\cls3.swf" />
+    <Content Include="charts\charts_library\clst.swf" />
+    <Content Include="charts\charts_library\cnno.swf" />
+    <Content Include="charts\charts_library\lnno.swf" />
+    <Content Include="charts\charts_library\mxno.swf" />
+    <Content Include="charts\charts_library\pi3d.swf" />
+    <Content Include="charts\charts_library\pino.swf" />
+    <Content Include="charts\charts_library\pono.swf" />
+    <Content Include="charts\charts_library\scno.swf" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\CHANGES.html" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\ckeditor_basic.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\INSTALL.html" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\id.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mk.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\ug.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\LICENSE.html" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\preview\preview.html" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="ClientBin\QueryTool.pdb" />
+    <Content Include="CMSExport.aspx" />
+    <Content Include="Content\DataTables\css\demo_page.css" />
+    <Content Include="Content\DataTables\css\demo_table.css" />
+    <Content Include="Content\DataTables\css\demo_table_jui.css" />
+    <Content Include="Content\DataTables\css\demo_table_jui_20140226001.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables\images\back_disabled.png" />
+    <Content Include="Content\DataTables\images\back_enabled.png" />
+    <Content Include="Content\DataTables\images\back_enabled_hover.png" />
+    <Content Include="Content\DataTables\images\favicon.ico" />
+    <Content Include="Content\DataTables\images\forward_disabled.png" />
+    <Content Include="Content\DataTables\images\forward_enabled.png" />
+    <Content Include="Content\DataTables\images\forward_enabled_hover.png" />
+    <Content Include="Content\DataTables\images\sort_asc.png" />
+    <Content Include="Content\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables\images\sort_both.png" />
+    <Content Include="Content\DataTables\images\sort_desc.png" />
+    <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="ConvertHtmlToPDF.aspx" />
+    <Content Include="CreateICS.aspx" />
+    <Content Include="CSRPointsDetail.aspx" />
+    <Content Include="CSSWeeklyDetail.aspx" />
+    <Content Include="css\1-column-center-layout.css" />
+    <Content Include="css\1-column-fluid-layout.css" />
+    <Content Include="css\2-column-fluid-layout.css" />
+    <Content Include="css\2-column-header-footer-layout.css" />
+    <Content Include="css\2-column-right-fluid-layout.css" />
+    <Content Include="css\3-column-center-layout.css" />
+    <Content Include="css\3-column-fluid-layout-ver-2.css" />
+    <Content Include="css\3-column-fluid-layout.css" />
+    <Content Include="css\acs_styles.css" />
+    <Content Include="css\adhoc.css" />
+    <Content Include="css\adnt_military_styles.css" />
+    <Content Include="css\aires_styles.css" />
+    <Content Include="css\ais.css" />
+    <Content Include="css\ais_styles.css" />
+    <Content Include="css\altair_styles.css" />
+    <Content Include="css\ars_styles.css" />
+    <Content Include="css\ars_survey_detail.css" />
+    <Content Include="css\atlas_intl_styles.css" />
+    <Content Include="css\atlas_military_styles.css" />
+    <Content Include="css\atlas_vanlines_styles.css" />
+    <Content Include="css\border-radius.htc" />
+    <Content Include="css\buttons.dataTables.min.css" />
+    <Content Include="css\buttons.jqueryui.min.css" />
+    <Content Include="css\cartus_corp_styles.css" />
+    <Content Include="css\cartus_styles.css" />
+    <Content Include="css\charter_us_styles.css" />
+    <Content Include="css\ChromeBlackGridView.css" />
+    <Content Include="css\colReorder.dataTables.min.css" />
+    <Content Include="css\convergent-menu.css" />
+    <Content Include="css\convergent\images\grd_alt.png" />
+    <Content Include="css\convergent\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\convergent\images\ui-icons_555555_256x240.png" />
+    <Content Include="css\convergent\images\ui-icons_777620_256x240.png" />
+    <Content Include="css\convergent\images\ui-icons_777777_256x240.png" />
+    <Content Include="css\convergent\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="css\convergent\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\convergent\jquery-ui.css" />
+    <Content Include="css\dark-hive\grid-style.css" />
+    <Content Include="css\dark-hive\images\grd_alt.png" />
+    <Content Include="css\dark-hive\images\grd_head.png" />
+    <Content Include="css\dark-hive\images\grd_pgr.png" />
+    <Content Include="css\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="css\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="css\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="css\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="css\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="css\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="css\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\dark-hive\jquery-ui-1.9.0.custom.css" />
+    <Content Include="css\dark-hive\jquery-ui-1.9.0.custom.min.css" />
+    <Content Include="css\dark-hive\jquery-ui-1.9.1.custom.css" />
+    <Content Include="css\dataTables.colReorder.css" />
+    <Content Include="css\dataTables.jqueryui.css" />
+    <Content Include="css\dataTables.jqueryui.min.css" />
+    <Content Include="css\demo-styles.css" />
+    <Content Include="css\examples.css" />
+    <Content Include="css\fixedHeader.dataTables.min.css" />
+    <Content Include="css\geo-map-styles.css" />
+    <Content Include="css\interstate_van_lines_styles.css" />
+    <Content Include="css\jquery.contextMenu.css" />
+    <Content Include="css\jquery.dataTables.min.css" />
+    <Content Include="css\jquery.jqplot.css" />
+    <Content Include="css\jquery.qtip.min.css" />
+    <Content Include="css\lytles-workbook\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="css\lytles-workbook\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\lytles-workbook\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\lytles-workbook\jquery-ui-1.9.2.custom.css" />
+    <Content Include="css\lytles-workbook\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="css\lytles-workbook\jquery-ui-1.9.2_20140508.custom.css" />
+    <Content Include="css\lytles-workbook\jquery-ui-1.9.2_20140627.custom.css" />
+    <Content Include="css\lytles-workbook\master-styles.css" />
+    <Content Include="css\master-styles-20131218.css" />
+    <Content Include="css\master-styles-20140205.css" />
+    <Content Include="css\master-styles-20140217.css" />
+    <Content Include="css\master-styles-ace.css" />
+    <Content Include="css\master-styles-convergent.css" />
+    <Content Include="css\master-styles.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\mesa_styles.css" />
+    <Content Include="css\multiSelect.css" />
+    <Content Include="css\nei_global_relocation_styles.css" />
+    <Content Include="css\nelson_westerberg_styles.css" />
+    <Content Include="css\nw_atlasvanlines_styles.css" />
+    <Content Include="css\nw_atlas_vanlines_styles.css" />
+    <Content Include="css\nw_consolidated_styles.css" />
+    <Content Include="css\nw_military_styles-20140113.css" />
+    <Content Include="css\nw_military_styles.css" />
+    <Content Include="css\nw_styles.css" />
+    <Content Include="css\online_survey.css" />
+    <Content Include="css\prettify.css" />
+    <Content Include="css\prudential_relocation_styles.css" />
+    <Content Include="css\prudential_reloc_styles.css" />
+    <Content Include="css\quadrant-layout.css" />
+    <Content Include="css\redmond\images\grd_alt.png" />
+    <Content Include="css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\redmond\jquery-ui-1.9.2.custom.css" />
+    <Content Include="css\redmond\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="css\redmond\jquery-ui-1.9.2_20140508.custom.css" />
+    <Content Include="css\redmond\jquery-ui-1.9.2_20140627.custom.css" />
+    <Content Include="css\redmond\master-styles.css" />
+    <Content Include="css\reports\1-table-blue-gray-first-col-rj.css" />
+    <Content Include="css\reports\1-table-blue-gray.css" />
+    <Content Include="css\reports\1-table-blue-orange.css" />
+    <Content Include="css\reports\convergent-report.css" />
+    <Content Include="css\reports\driver-tier-report.css" />
+    <Content Include="css\reports\green-gray-largefont.css" />
+    <Content Include="css\reports\maroon-black-largefont.css" />
+    <Content Include="css\reports\maroon-black.css" />
+    <Content Include="css\reports\move-happy-blue-gray.css" />
+    <Content Include="css\reports\orange-gray-largefont.css" />
+    <Content Include="css\reports\orange-gray.css" />
+    <Content Include="css\reports\pvo-plain.css" />
+    <Content Include="css\spin.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\superfish-navbar.css" />
+    <Content Include="css\superfish-vertical.css" />
+    <Content Include="css\superfish.css" />
+    <Content Include="css\superfish_new.css" />
+    <Content Include="css\survey_detail.css" />
+    <Content Include="css\TableTools.css" />
+    <Content Include="css\TableTools_JUI.css" />
+    <Content Include="css\weichert_styles.css" />
+    <Content Include="CSViolationTypesDetail.aspx" />
+    <Content Include="DeficientSurveyComments.aspx" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="PrintPage.aspx" />
+    <Content Include="PVOPointsDetail.aspx" />
+    <Content Include="SafetyPointsDetail.aspx" />
+    <Content Include="Site\RatingTracker.aspx" />
+    <Content Include="Site\ReportingArea.aspx" />
+    <Content Include="Site\ScoreCard.aspx" />
+    <Content Include="Site\SCACScoreCard.aspx" />
+    <Content Include="Site\Documents.aspx" />
+    <Content Include="DriverSafetyPointsDetail.aspx" />
+    <Content Include="ExportToExcel.aspx" />
+    <Content Include="fancybox\blank.gif" />
+    <Content Include="fancybox\fancybox-x.png" />
+    <Content Include="fancybox\fancybox-y.png" />
+    <Content Include="fancybox\fancybox.png" />
+    <Content Include="fancybox\fancy_close.png" />
+    <Content Include="fancybox\fancy_loading.png" />
+    <Content Include="fancybox\fancy_nav_left.png" />
+    <Content Include="fancybox\fancy_nav_right.png" />
+    <Content Include="fancybox\fancy_shadow_e.png" />
+    <Content Include="fancybox\fancy_shadow_n.png" />
+    <Content Include="fancybox\fancy_shadow_ne.png" />
+    <Content Include="fancybox\fancy_shadow_nw.png" />
+    <Content Include="fancybox\fancy_shadow_s.png" />
+    <Content Include="fancybox\fancy_shadow_se.png" />
+    <Content Include="fancybox\fancy_shadow_sw.png" />
+    <Content Include="fancybox\fancy_shadow_w.png" />
+    <Content Include="fancybox\fancy_title_left.png" />
+    <Content Include="fancybox\fancy_title_main.png" />
+    <Content Include="fancybox\fancy_title_over.png" />
+    <Content Include="fancybox\fancy_title_right.png" />
+    <Content Include="fancybox\jquery-1.4.3.min.js" />
+    <Content Include="fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="fonts\license.txt" />
+    <Content Include="GetFile.aspx" />
+    <Content Include="images\300px-Button_Icon_Blue.svg.png" />
+    <Content Include="images\AA.png" />
+    <Content Include="images\ais-logo-sm.png" />
+    <Content Include="images\ais_header.jpg" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\ARSLogo.jpg" />
+    <Content Include="images\asi_bkgd.jpg" />
+    <Content Include="images\asi_logo.jpg" />
+    <Content Include="images\asi_logo_sm.jpg" />
+    <Content Include="images\asi_title.jpg" />
+    <Content Include="images\asi_title_sm.jpg" />
+    <Content Include="images\atlantic_logo.png" />
+    <Content Include="images\atlantic_logo_sm.png" />
+    <Content Include="images\atlas_logo.png" />
+    <Content Include="images\avail-demo\2012-charges-stats.png" />
+    <Content Include="images\avail-demo\2012-shipment-stats.png" />
+    <Content Include="images\avail-demo\2012-shipment-variances.png" />
+    <Content Include="images\avail-demo\2013-charges-stats.png" />
+    <Content Include="images\avail-demo\2013-shipment-stats.png" />
+    <Content Include="images\avail-demo\2013-shipment-variances.png" />
+    <Content Include="images\avail-demo\claims-data.png" />
+    <Content Include="images\avail-demo\lead-and=transit-times.png" />
+    <Content Include="images\avail-demo\shipment-counts.png" />
+    <Content Include="images\avail-demo\shipment-size-comparisons.png" />
+    <Content Include="images\avail-demo\top-10-traffic-lanes.png" />
+    <Content Include="images\avail-demo\valuation-cost-observations.png" />
+    <Content Include="images\availmm-blk-sm.png" />
+    <Content Include="images\availmm-blk.png" />
+    <Content Include="images\background.png" />
+    <Content Include="images\back_blue.jpg" />
+    <Content Include="images\back_btn.gif" />
+    <Content Include="images\back_form.gif" />
+    <Content Include="images\back_header.jpg" />
+    <Content Include="images\blue-button.png" />
+    <Content Include="images\blue-exclamation-icon.png" />
+    <Content Include="images\blue-gear-icon.png" />
+    <Content Include="images\brown-button.png" />
+    <Content Include="images\bullet1.jpg" />
+    <Content Include="images\bullet2.jpg" />
+    <Content Include="images\bullet3.jpg" />
+    <Content Include="images\bullet4.jpg" />
+    <Content Include="images\calendar.gif" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\calendar_background_black.gif" />
+    <Content Include="images\cancel-icon.png" />
+    <Content Include="images\cartwright-logo-sm.jpg" />
+    <Content Include="images\chart-buttons.png" />
+    <Content Include="images\check-resized.jpg" />
+    <Content Include="images\clear-sm.png" />
+    <Content Include="images\collapse.jpg" />
+    <Content Include="images\collection.png" />
+    <Content Include="images\collection_hover.png" />
+    <Content Include="images\comments_background.png" />
+    <Content Include="images\contact_left.jpg" />
+    <Content Include="images\contact_right.jpg" />
+    <Content Include="images\contact_us.jpg" />
+    <Content Include="images\convergent-2-search-criteria.png" />
+    <Content Include="images\convergent-logo-sm.png" />
+    <Content Include="images\convergent-search-criteria.png" />
+    <Content Include="images\copy.png" />
+    <Content Include="images\copy_hover.png" />
+    <Content Include="images\corner.gif" />
+    <Content Include="images\CriticalError.png" />
+    <Content Include="images\csv.png" />
+    <Content Include="images\csv_hover.png" />
+    <Content Include="images\ctrl_border_blc.jpg" />
+    <Content Include="images\ctrl_border_bottom.jpg" />
+    <Content Include="images\ctrl_border_left.jpg" />
+    <Content Include="images\ctrl_border_right.jpg" />
+    <Content Include="images\ctrl_border_top.jpg" />
+    <Content Include="images\ctrl_bottom_lrc.jpg" />
+    <Content Include="images\ctrl_corner_tlc.jpg" />
+    <Content Include="images\ctrl_top_urc.jpg" />
+    <Content Include="images\customSelect-arrow.gif" />
+    <Content Include="images\cut.png" />
+    <Content Include="images\door.png" />
+    <Content Include="images\download.png" />
+    <Content Include="images\edc-logo.png" />
+    <Content Include="images\Excel-32.gif" />
+    <Content Include="images\Excel.gif" />
+    <Content Include="images\expand.jpg" />
+    <Content Include="images\fadingSquares.gif" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\FieldItemOver.png" />
+    <Content Include="images\FieldListHeader.png" />
+    <Content Include="images\FieldListHeaderOver.png" />
+    <Content Include="images\gear-icon.png" />
+    <Content Include="images\gobtn.jpg" />
+    <Content Include="images\gradient.png" />
+    <Content Include="images\gray-gear-icon.png" />
+    <Content Include="images\green-button.png" />
+    <Content Include="images\green-exclamation-icon.png" />
+    <Content Include="images\green-gear-icon.png" />
+    <Content Include="images\green_check.png" />
+    <Content Include="images\HeaderChrome.jpg" />
+    <Content Include="images\HeaderChromeBlack.jpg" />
+    <Content Include="images\HeaderGamer.jpg" />
+    <Content Include="images\HeaderGamer_Hover.jpg" />
+    <Content Include="images\HeaderGamer_left.jpg" />
+    <Content Include="images\HeaderGlassBlack.jpg" />
+    <Content Include="images\HeaderSoftGrey.jpg" />
+    <Content Include="images\HeaderWhiteChrome.jpg" />
+    <Content Include="images\hex-loader2.gif" />
+    <Content Include="images\icon-doc-sm.png" />
+    <Content Include="images\icon-document-sm.png" />
+    <Content Include="images\icon-doc_opt.png" />
+    <Content Include="images\iconmonstr-note-icon-16.png" />
+    <Content Include="images\iconmonstr-note-icon-24.png" />
+    <Content Include="images\Information.png" />
+    <Content Include="images\inline-ajax-indicator.gif" />
+    <Content Include="images\insert.png" />
+    <Content Include="images\labornet.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\loadingGif.gif" />
+    <Content Include="images\login_button.jpg" />
+    <Content Include="images\login_photo1.jpg" />
+    <Content Include="images\login_photo10.jpg" />
+    <Content Include="images\login_photo11.jpg" />
+    <Content Include="images\login_photo2.jpg" />
+    <Content Include="images\login_photo3.jpg" />
+    <Content Include="images\login_photo4.jpg" />
+    <Content Include="images\login_photo5.jpg" />
+    <Content Include="images\login_photo6.jpg" />
+    <Content Include="images\login_photo7.jpg" />
+    <Content Include="images\login_photo8.jpg" />
+    <Content Include="images\login_photo9.jpg" />
+    <Content Include="images\login_photo_lcorner.jpg" />
+    <Content Include="images\login_photo_rcorner.jpg" />
+    <Content Include="images\logo_ico.jpg" />
+    <Content Include="images\logo_noback.png" />
+    <Content Include="images\lytles-logo.png" />
+    <Content Include="images\lytles-red.png" />
+    <Content Include="images\Match.png" />
+    <Content Include="images\MD_5_version1-01.png" />
+    <Content Include="images\menu-bg.gif" />
+    <Content Include="images\milthill.png" />
+    <Content Include="images\movehappy-logo.png" />
+    <Content Include="images\NoMatch.png" />
+    <Content Include="images\orange-button.png" />
+    <Content Include="images\orange-gear-icon.png" />
+    <Content Include="images\pageheaderbkgd.jpg" />
+    <Content Include="images\pageheaderleftbkgd.jpg" />
+    <Content Include="images\pageheaderrightbkgd.jpg" />
+    <Content Include="images\PagerGamer.jpg" />
+    <Content Include="images\page_white_add.png" />
+    <Content Include="images\page_white_copy.png" />
+    <Content Include="images\page_white_delete.png" />
+    <Content Include="images\page_white_edit.png" />
+    <Content Include="images\page_white_paste.png" />
+    <Content Include="images\panelHeaderbkgd.jpg" />
+    <Content Include="images\pdf-32.gif" />
+    <Content Include="images\pdf-download.jpg" />
+    <Content Include="images\pdf.gif" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\pdfButton.gif" />
+    <Content Include="images\pdf_hover.png" />
+    <Content Include="images\pdf_icon.png" />
+    <Content Include="images\pink-button.png" />
+    <Content Include="images\pnlheadleftbkgd.jpg" />
+    <Content Include="images\pnlheadmidbkgd.jpg" />
+    <Content Include="images\pnlheadrightbkgd.jpg" />
+    <Content Include="images\powell-logo.jpg" />
+    <Content Include="images\print.png" />
+    <Content Include="images\Printer.png" />
+    <Content Include="images\print_hover.png" />
+    <Content Include="images\purple-button.png" />
+    <Content Include="images\purple-gear-icon.png" />
+    <Content Include="images\radial_bg.png" />
+    <Content Include="images\red-button.png" />
+    <Content Include="images\red-exclamation-mark.png" />
+    <Content Include="images\red-gear-icon.png" />
+    <Content Include="images\report-loading-2.gif" />
+    <Content Include="images\report-loading.gif" />
+    <Content Include="images\right_top_corner.jpg" />
+    <Content Include="images\rss_xml.gif" />
+    <Content Include="images\save-icon.png" />
+    <Content Include="images\ScreenShot.png" />
+    <Content Include="images\search-criteria.png" />
+    <Content Include="images\SITEICON.png" />
+    <Content Include="images\siteicon_sm.png" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\spacer_left.jpg" />
+    <Content Include="images\spacer_middle.jpg" />
+    <Content Include="images\spacer_right.jpg" />
+    <Content Include="images\t.gif" />
+    <Content Include="images\toggle.jpg" />
+    <Content Include="images\toggle.png" />
+    <Content Include="images\top_bkgd.jpg" />
+    <Content Include="images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="images\ui-bg_flat_70_cccccc_40x100.png" />
+    <Content Include="images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="images\ui-bg_gloss-wave_35_ffffff_500x100.png" />
+    <Content Include="images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="images\ui-bg_highlight-soft_70_f5f475_1x100.png" />
+    <Content Include="images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="images\ui-bg_inset-soft_100_b81900_1x100.png" />
+    <Content Include="images\ui-bg_inset-soft_65_56524e_1x100.png" />
+    <Content Include="images\ui-icons_222222_256x240.png" />
+    <Content Include="images\ui-icons_228ef1_256x240.png" />
+    <Content Include="images\ui-icons_b81900_256x240.png" />
+    <Content Include="images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="images\ui-icons_ffe45c_256x240.png" />
+    <Content Include="images\ui-icons_ffffff_256x240.png" />
+    <Content Include="images\visitoralerts_vms.png" />
+    <Content Include="images\Warning.png" />
+    <Content Include="images\welcome.jpg" />
+    <Content Include="images\welcome_left.jpg" />
+    <Content Include="images\welcome_right.jpg" />
+    <Content Include="images\Word-32.gif" />
+    <Content Include="images\word_img.gif" />
+    <Content Include="images\workflow-complete.png" />
+    <Content Include="images\worldclass.png" />
+    <Content Include="images\xls.png" />
+    <Content Include="images\xls_hover.png" />
+    <Content Include="images\YahooSprite.gif" />
+    <Content Include="images\yellow-button.png" />
+    <Content Include="images\yellow-exclamation-icon.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="media\swf\copy_csv_xls.swf" />
+    <Content Include="media\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="reports\ARSCheckRequest.aspx" />
+    <Content Include="reports\ARSDriverTierRanking.aspx" />
+    <Content Include="reports\ARSDriverTierRankingDetail.aspx" />
+    <Content Include="reports\CheckRequest - Copy.aspx" />
+    <Content Include="reports\CheckRequest.aspx" />
+    <Content Include="reports\PrintCheck.aspx" />
+    <Content Include="reports\TableReport.xml" />
+    <Content Include="Scripts\convergent-claims-module.js" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="FusionChartXmlHandler.ashx" />
+    <Content Include="ListHandler.ashx" />
+    <Content Include="AtlanticHandler.ashx" />
+    <Content Include="FileUploadHandler.ashx" />
+    <Content Include="LytlesHandler.ashx" />
+    <Content Include=".vs\AISReports.csproj.dtbcache.json" />
+    <Content Include=".vs\AISReports\config\applicationhost.config" />
+    <Content Include=".vs\AISReports\copilot-chat\cf2453c0\sessions\093e600c-7c8f-4c6b-a187-b9a02cc7a998" />
+    <Content Include=".vs\AISReports\copilot-chat\cf2453c0\sessions\bf9b98e1-3d9d-4beb-94e8-c065447659b2" />
+    <Content Include=".vs\AISReports\CopilotIndices\17.14.1091.29919\CodeChunks.db" />
+    <Content Include=".vs\AISReports\CopilotIndices\17.14.1091.29919\SemanticSymbols.db" />
+    <Content Include=".vs\AISReports\CopilotIndices\17.14.1290.42047\CodeChunks.db" />
+    <Content Include=".vs\AISReports\CopilotIndices\17.14.1290.42047\SemanticSymbols.db" />
+    <Content Include=".vs\AISReports\FileContentIndex\438f86cb-203e-41a6-9b03-4ae9080e71a1.vsidx" />
+    <Content Include=".vs\AISReports\FileContentIndex\64062c42-3e3a-4738-beef-73e8e221af96.vsidx" />
+    <Content Include=".vs\AISReports\FileContentIndex\683992d1-390b-453d-a877-c8bd3f62a312.vsidx" />
+    <Content Include=".vs\AISReports\FileContentIndex\a75ef281-3383-4485-92a8-c0d58815396e.vsidx" />
+    <Content Include=".vs\AISReports\FileContentIndex\e572ad8b-56b4-4695-ad8a-46cdf687c3a0.vsidx" />
+    <Content Include=".vs\AISReports\v17\DocumentLayout.backup.json" />
+    <Content Include=".vs\AISReports\v17\DocumentLayout.json" />
+    <Content Include=".vs\AISReports\v17\fileList.bin" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="script\accounting.min.js" />
+    <Content Include="script\ais.js" />
+    <Content Include="script\arc90_multiselect.js" />
+    <Content Include="script\buttons.html5.min.js" />
+    <Content Include="script\center-plugin_1.0.1.js" />
+    <Content Include="script\colReorder.dataTables.min.css" />
+    <Content Include="script\convergent-claims-dashboard.js" />
+    <Content Include="script\convergent-claims-module.js" />
+    <Content Include="script\dataTables.buttons.min.js" />
+    <Content Include="script\dataTables.colReorder.min.js" />
+    <Content Include="script\dataTables.fixedHeader.js" />
+    <Content Include="script\dataTables.fixedHeader.min.js" />
+    <Content Include="script\dataTables.fnGetColumnIndex.js" />
+    <Content Include="script\dataTables.fnHideColumns.js" />
+    <Content Include="script\dataTables.fnReloadAjax.js" />
+    <Content Include="script\dataTables.jqueryui.min.js" />
+    <Content Include="script\dataTables.scroller.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.bootstrap.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.bootstrap.min.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.dataTables.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.dataTables.min.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.foundation.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.foundation.min.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.jqueryui.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\buttons.jqueryui.min.css" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.bootstrap.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.bootstrap.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.colVis.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.colVis.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.flash.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.flash.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.foundation.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.foundation.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.html5.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.html5.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.jqueryui.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.jqueryui.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.print.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\buttons.print.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\dataTables.buttons.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\js\dataTables.buttons.min.js" />
+    <Content Include="script\DataTables\Buttons-1.2.1\swf\flashExport.swf" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.bootstrap.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.bootstrap.min.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.dataTables.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.dataTables.min.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.foundation.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.foundation.min.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.jqueryui.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\css\colReorder.jqueryui.min.css" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\js\dataTables.colReorder.js" />
+    <Content Include="script\DataTables\ColReorder-1.3.2\js\dataTables.colReorder.min.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\dataTables.bootstrap.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\dataTables.bootstrap.min.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\dataTables.foundation.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\dataTables.foundation.min.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\dataTables.jqueryui.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\dataTables.jqueryui.min.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\jquery.dataTables.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\jquery.dataTables.min.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\css\jquery.dataTables_themeroller.css" />
+    <Content Include="script\DataTables\DataTables-1.10.12\images\sort_asc.png" />
+    <Content Include="script\DataTables\DataTables-1.10.12\images\sort_asc_disabled.png" />
+    <Content Include="script\DataTables\DataTables-1.10.12\images\sort_both.png" />
+    <Content Include="script\DataTables\DataTables-1.10.12\images\sort_desc.png" />
+    <Content Include="script\DataTables\DataTables-1.10.12\images\sort_desc_disabled.png" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\dataTables.bootstrap.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\dataTables.bootstrap.min.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\dataTables.foundation.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\dataTables.foundation.min.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\dataTables.jqueryui.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\dataTables.jqueryui.min.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\jquery.dataTables.js" />
+    <Content Include="script\DataTables\DataTables-1.10.12\js\jquery.dataTables.min.js" />
+    <Content Include="script\DataTables\datatables.css" />
+    <Content Include="script\DataTables\datatables.js" />
+    <Content Include="script\DataTables\datatables.min.css" />
+    <Content Include="script\DataTables\datatables.min.js" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.bootstrap.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.dataTables.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.dataTables.min.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.foundation.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.foundation.min.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.jqueryui.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\js\dataTables.fixedHeader.js" />
+    <Content Include="script\DataTables\FixedHeader-3.1.2\js\dataTables.fixedHeader.min.js" />
+    <Content Include="script\DataTables\jQuery-1.12.3\jquery-1.12.3.js" />
+    <Content Include="script\DataTables\jQuery-1.12.3\jquery-1.12.3.min.js" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-icons_222222_256x240.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.css" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.js" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.min.css" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.min.js" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.structure.css" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.structure.min.css" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.theme.css" />
+    <Content Include="script\DataTables\jQueryUI-1.11.4\jquery-ui.theme.min.css" />
+    <Content Include="script\DataTables\JSZip-2.5.0\jszip.js" />
+    <Content Include="script\DataTables\JSZip-2.5.0\jszip.min.js" />
+    <Content Include="script\DataTables\pdfmake-0.1.18\build\pdfmake.js" />
+    <Content Include="script\DataTables\pdfmake-0.1.18\build\pdfmake.min.js" />
+    <Content Include="script\DataTables\pdfmake-0.1.18\build\vfs_fonts.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.bootstrap.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.bootstrap.min.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.dataTables.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.dataTables.min.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.foundation.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.foundation.min.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.jqueryui.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\css\responsive.jqueryui.min.css" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\dataTables.responsive.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\dataTables.responsive.min.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\responsive.bootstrap.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\responsive.bootstrap.min.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\responsive.foundation.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\responsive.foundation.min.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\responsive.jqueryui.js" />
+    <Content Include="script\DataTables\Responsive-2.1.0\js\responsive.jqueryui.min.js" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.bootstrap.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.bootstrap.min.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.dataTables.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.dataTables.min.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.foundation.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.foundation.min.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.jqueryui.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\css\scroller.jqueryui.min.css" />
+    <Content Include="script\DataTables\Scroller-1.4.2\js\dataTables.scroller.js" />
+    <Content Include="script\DataTables\Scroller-1.4.2\js\dataTables.scroller.min.js" />
+    <Content Include="script\datetime-moment.js" />
+    <Content Include="script\datTables.fnStandingRedraw.js" />
+    <Content Include="script\excanvas.min.js" />
+    <Content Include="script\fusioncharts-jquery-plugin.js" />
+    <Content Include="script\fusioncharts.charts - Copy.js" />
+    <Content Include="script\fusioncharts.charts.js" />
+    <Content Include="script\fusioncharts.gantt.js" />
+    <Content Include="script\fusioncharts.js" />
+    <Content Include="script\fusioncharts.maps.js" />
+    <Content Include="script\fusioncharts.powercharts.js" />
+    <Content Include="script\fusioncharts.ssgrid.js" />
+    <Content Include="script\fusioncharts.treemap.js" />
+    <Content Include="script\fusioncharts.widgets.js" />
+    <Content Include="script\fusioncharts.zoomscatter.js" />
+    <Content Include="script\global-functions.js" />
+    <Content Include="script\gmaps.js" />
+    <Content Include="script\google-charts-jsapi.js" />
+    <Content Include="script\hoverIntent.js" />
+    <Content Include="script\HtmlPage.html" />
+    <Content Include="script\jquery-1.10.1.min.js" />
+    <Content Include="script\jquery-1.11.2.min.js" />
+    <Content Include="script\jquery-1.12.3.min.js" />
+    <Content Include="script\jquery-1.6.2.min.js" />
+    <Content Include="script\jquery-1.8.3.js" />
+    <Content Include="script\jquery-1.9.1.js" />
+    <Content Include="script\jquery-migrate-1.2.1.js" />
+    <Content Include="script\jquery-ui-1.10.3.custom.js" />
+    <Content Include="script\jquery-ui-1.12.1.js" />
+    <Content Include="script\jquery-ui-1.8.16.custom.css" />
+    <Content Include="script\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="script\jquery-ui-1.9.2.custom.js" />
+    <Content Include="script\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="script\jquery.bgiframe.min.js" />
+    <Content Include="script\jquery.contextMenu.js" />
+    <Content Include="script\jquery.corner.js" />
+    <Content Include="script\jquery.currency.js" />
+    <Content Include="script\jquery.customSelect.min.js" />
+    <Content Include="script\jquery.dataTables.editable.js" />
+    <Content Include="script\jquery.dataTables.js" />
+    <Content Include="script\jquery.dataTables.min.js" />
+    <Content Include="script\jquery.datetimepicker.css" />
+    <Content Include="script\jquery.datetimepicker.js" />
+    <Content Include="script\jquery.jeditable.mini.js" />
+    <Content Include="script\jquery.jqplot.min.js" />
+    <Content Include="script\jquery.mask.js" />
+    <Content Include="script\jquery.mousewheel.js" />
+    <Content Include="script\jquery.qtip.min.js" />
+    <Content Include="script\jquery.table2excel.js" />
+    <Content Include="script\jquery.tabSlideOut.v1.3.js" />
+    <Content Include="script\jquery.timepicker.css" />
+    <Content Include="script\jquery.timepicker.min.js" />
+    <Content Include="script\jquery.tools.min.js" />
+    <Content Include="script\jquery.ui.autocomplete.js" />
+    <Content Include="script\jquery.ui.core.js" />
+    <Content Include="script\jquery.ui.position.js" />
+    <Content Include="script\jquery.ui.widget.js" />
+    <Content Include="script\json2.js" />
+    <Content Include="script\json3.min.js" />
+    <Content Include="script\jszip.min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-chord-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-grid-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-alb-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-and-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-arg-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-aus-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-aut-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-bel-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-bgr-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-blr-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-bra-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-can-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-che-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-chn-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-cyp-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-cze-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-deu-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-dnk-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-esp-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-espL2-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-est-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-fin-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-fra-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-fraL2-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-gbr-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-gbrL2-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-grc-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-hrv-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-hun-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-ind-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-irl-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-isl-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-isr-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-ita-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-jpn-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-kor-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-lie-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-ltu-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-lux-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-lva-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-mex-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-nor-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-nzl-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-pol-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-prt-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-qat-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-rou-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-rus-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-srb-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-tur-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-ukr-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ak-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_al-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ar-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_az-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ca-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_co-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ct-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_dc-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_de-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_fl-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ga-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_hi-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ia-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_id-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_il-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_in-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ks-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ky-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_la-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ma-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_md-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_me-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_mi-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_mn-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_mo-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ms-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_mt-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_nc-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_nd-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ne-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_nh-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_nj-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_nm-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_nv-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ny-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_oh-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ok-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_or-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_pa-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ri-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_sc-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_sd-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_tn-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_tx-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_ut-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_va-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_vt-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_wa-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_wi-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_wv-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-usa_wy-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-uzb-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-ven-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-world-continents-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-world-countries-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-maps-zaf-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-pareto-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-patterns-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-rankflow-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-treemap-min.js" />
+    <Content Include="script\modules-phantomjs\zingchart-phantomjs-wordcloud-min.js" />
+    <Content Include="script\modules\zingchart-3d.min.js" />
+    <Content Include="script\modules\zingchart-animation.min.js" />
+    <Content Include="script\modules\zingchart-api-annotations.min.js" />
+    <Content Include="script\modules\zingchart-api-rules.min.js" />
+    <Content Include="script\modules\zingchart-api.min.js" />
+    <Content Include="script\modules\zingchart-area.min.js" />
+    <Content Include="script\modules\zingchart-area3d.min.js" />
+    <Content Include="script\modules\zingchart-boxplot.min.js" />
+    <Content Include="script\modules\zingchart-bubble.min.js" />
+    <Content Include="script\modules\zingchart-calendar.min.js" />
+    <Content Include="script\modules\zingchart-chord.min.js" />
+    <Content Include="script\modules\zingchart-core.min.js" />
+    <Content Include="script\modules\zingchart-csv.min.js" />
+    <Content Include="script\modules\zingchart-debug.min.js" />
+    <Content Include="script\modules\zingchart-dragging.min.js" />
+    <Content Include="script\modules\zingchart-errorbars.min.js" />
+    <Content Include="script\modules\zingchart-export.min.js" />
+    <Content Include="script\modules\zingchart-gauge.min.js" />
+    <Content Include="script\modules\zingchart-grid.min.js" />
+    <Content Include="script\modules\zingchart-guide.min.js" />
+    <Content Include="script\modules\zingchart-hbar.min.js" />
+    <Content Include="script\modules\zingchart-hbar3d.min.js" />
+    <Content Include="script\modules\zingchart-hbubble.min.js" />
+    <Content Include="script\modules\zingchart-hbullet.min.js" />
+    <Content Include="script\modules\zingchart-hfunnel.min.js" />
+    <Content Include="script\modules\zingchart-history.min.js" />
+    <Content Include="script\modules\zingchart-hscatter.min.js" />
+    <Content Include="script\modules\zingchart-legend.min.js" />
+    <Content Include="script\modules\zingchart-line.min.js" />
+    <Content Include="script\modules\zingchart-line3d.min.js" />
+    <Content Include="script\modules\zingchart-maps-afg.min.js" />
+    <Content Include="script\modules\zingchart-maps-ago.min.js" />
+    <Content Include="script\modules\zingchart-maps-alb.min.js" />
+    <Content Include="script\modules\zingchart-maps-and.min.js" />
+    <Content Include="script\modules\zingchart-maps-are.min.js" />
+    <Content Include="script\modules\zingchart-maps-arg.min.js" />
+    <Content Include="script\modules\zingchart-maps-arm.min.js" />
+    <Content Include="script\modules\zingchart-maps-aus.min.js" />
+    <Content Include="script\modules\zingchart-maps-aut.min.js" />
+    <Content Include="script\modules\zingchart-maps-aze.min.js" />
+    <Content Include="script\modules\zingchart-maps-bdi.min.js" />
+    <Content Include="script\modules\zingchart-maps-bel.min.js" />
+    <Content Include="script\modules\zingchart-maps-ben.min.js" />
+    <Content Include="script\modules\zingchart-maps-bfa.min.js" />
+    <Content Include="script\modules\zingchart-maps-bgr.min.js" />
+    <Content Include="script\modules\zingchart-maps-bih.min.js" />
+    <Content Include="script\modules\zingchart-maps-blr.min.js" />
+    <Content Include="script\modules\zingchart-maps-bol.min.js" />
+    <Content Include="script\modules\zingchart-maps-bra.min.js" />
+    <Content Include="script\modules\zingchart-maps-brn.min.js" />
+    <Content Include="script\modules\zingchart-maps-btn.min.js" />
+    <Content Include="script\modules\zingchart-maps-bwa.min.js" />
+    <Content Include="script\modules\zingchart-maps-caf.min.js" />
+    <Content Include="script\modules\zingchart-maps-can.min.js" />
+    <Content Include="script\modules\zingchart-maps-che.min.js" />
+    <Content Include="script\modules\zingchart-maps-chl.min.js" />
+    <Content Include="script\modules\zingchart-maps-chn.min.js" />
+    <Content Include="script\modules\zingchart-maps-civ.min.js" />
+    <Content Include="script\modules\zingchart-maps-cmr.min.js" />
+    <Content Include="script\modules\zingchart-maps-cod.min.js" />
+    <Content Include="script\modules\zingchart-maps-cog.min.js" />
+    <Content Include="script\modules\zingchart-maps-col.min.js" />
+    <Content Include="script\modules\zingchart-maps-cri.min.js" />
+    <Content Include="script\modules\zingchart-maps-cub.min.js" />
+    <Content Include="script\modules\zingchart-maps-cyp.min.js" />
+    <Content Include="script\modules\zingchart-maps-cze.min.js" />
+    <Content Include="script\modules\zingchart-maps-deu.min.js" />
+    <Content Include="script\modules\zingchart-maps-dnk.min.js" />
+    <Content Include="script\modules\zingchart-maps-ecu.min.js" />
+    <Content Include="script\modules\zingchart-maps-egy.min.js" />
+    <Content Include="script\modules\zingchart-maps-esp.min.js" />
+    <Content Include="script\modules\zingchart-maps-espL2.min.js" />
+    <Content Include="script\modules\zingchart-maps-est.min.js" />
+    <Content Include="script\modules\zingchart-maps-eth.min.js" />
+    <Content Include="script\modules\zingchart-maps-fin.min.js" />
+    <Content Include="script\modules\zingchart-maps-fra.min.js" />
+    <Content Include="script\modules\zingchart-maps-fraL2.min.js" />
+    <Content Include="script\modules\zingchart-maps-gab.min.js" />
+    <Content Include="script\modules\zingchart-maps-gbr.min.js" />
+    <Content Include="script\modules\zingchart-maps-gbrL2.min.js" />
+    <Content Include="script\modules\zingchart-maps-geojson.min.js" />
+    <Content Include="script\modules\zingchart-maps-gha.min.js" />
+    <Content Include="script\modules\zingchart-maps-gmb.min.js" />
+    <Content Include="script\modules\zingchart-maps-gnb.min.js" />
+    <Content Include="script\modules\zingchart-maps-grc.min.js" />
+    <Content Include="script\modules\zingchart-maps-gtm.min.js" />
+    <Content Include="script\modules\zingchart-maps-guf.min.js" />
+    <Content Include="script\modules\zingchart-maps-guy.min.js" />
+    <Content Include="script\modules\zingchart-maps-hrv.min.js" />
+    <Content Include="script\modules\zingchart-maps-hun.min.js" />
+    <Content Include="script\modules\zingchart-maps-ind.min.js" />
+    <Content Include="script\modules\zingchart-maps-irl.min.js" />
+    <Content Include="script\modules\zingchart-maps-irn.min.js" />
+    <Content Include="script\modules\zingchart-maps-isl.min.js" />
+    <Content Include="script\modules\zingchart-maps-isr.min.js" />
+    <Content Include="script\modules\zingchart-maps-ita.min.js" />
+    <Content Include="script\modules\zingchart-maps-jpn.min.js" />
+    <Content Include="script\modules\zingchart-maps-kaz.min.js" />
+    <Content Include="script\modules\zingchart-maps-ken.min.js" />
+    <Content Include="script\modules\zingchart-maps-kor.min.js" />
+    <Content Include="script\modules\zingchart-maps-kwt.min.js" />
+    <Content Include="script\modules\zingchart-maps-lao.min.js" />
+    <Content Include="script\modules\zingchart-maps-lbr.min.js" />
+    <Content Include="script\modules\zingchart-maps-lie.min.js" />
+    <Content Include="script\modules\zingchart-maps-ltu.min.js" />
+    <Content Include="script\modules\zingchart-maps-lux.min.js" />
+    <Content Include="script\modules\zingchart-maps-lva.min.js" />
+    <Content Include="script\modules\zingchart-maps-mda.min.js" />
+    <Content Include="script\modules\zingchart-maps-mex.min.js" />
+    <Content Include="script\modules\zingchart-maps-mkd.min.js" />
+    <Content Include="script\modules\zingchart-maps-mne.min.js" />
+    <Content Include="script\modules\zingchart-maps-moz.min.js" />
+    <Content Include="script\modules\zingchart-maps-nam.min.js" />
+    <Content Include="script\modules\zingchart-maps-ncl.min.js" />
+    <Content Include="script\modules\zingchart-maps-nga.min.js" />
+    <Content Include="script\modules\zingchart-maps-nld.min.js" />
+    <Content Include="script\modules\zingchart-maps-nor.min.js" />
+    <Content Include="script\modules\zingchart-maps-nzl.min.js" />
+    <Content Include="script\modules\zingchart-maps-omn.min.js" />
+    <Content Include="script\modules\zingchart-maps-pak.min.js" />
+    <Content Include="script\modules\zingchart-maps-pan.min.js" />
+    <Content Include="script\modules\zingchart-maps-per.min.js" />
+    <Content Include="script\modules\zingchart-maps-phl.min.js" />
+    <Content Include="script\modules\zingchart-maps-png.min.js" />
+    <Content Include="script\modules\zingchart-maps-pol.min.js" />
+    <Content Include="script\modules\zingchart-maps-prt.min.js" />
+    <Content Include="script\modules\zingchart-maps-qat.min.js" />
+    <Content Include="script\modules\zingchart-maps-rou.min.js" />
+    <Content Include="script\modules\zingchart-maps-rus.min.js" />
+    <Content Include="script\modules\zingchart-maps-rwa.min.js" />
+    <Content Include="script\modules\zingchart-maps-sen.min.js" />
+    <Content Include="script\modules\zingchart-maps-slv.min.js" />
+    <Content Include="script\modules\zingchart-maps-srb.min.js" />
+    <Content Include="script\modules\zingchart-maps-sur.min.js" />
+    <Content Include="script\modules\zingchart-maps-svk.min.js" />
+    <Content Include="script\modules\zingchart-maps-svn.min.js" />
+    <Content Include="script\modules\zingchart-maps-swe.min.js" />
+    <Content Include="script\modules\zingchart-maps-tha.min.js" />
+    <Content Include="script\modules\zingchart-maps-tjk.min.js" />
+    <Content Include="script\modules\zingchart-maps-tun.min.js" />
+    <Content Include="script\modules\zingchart-maps-tur.min.js" />
+    <Content Include="script\modules\zingchart-maps-twn.min.js" />
+    <Content Include="script\modules\zingchart-maps-uga.min.js" />
+    <Content Include="script\modules\zingchart-maps-ukr.min.js" />
+    <Content Include="script\modules\zingchart-maps-ury.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ak.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_al.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ar.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_az.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ca.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_co.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ct.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_dc.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_de.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_fl.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ga.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_hi.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ia.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_id.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_il.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_in.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ks.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ky.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_la.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ma.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_md.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_me.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_mi.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_mn.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_mo.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ms.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_mt.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_nc.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_nd.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ne.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_nh.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_nj.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_nm.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_nv.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ny.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_oh.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ok.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_or.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_pa.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ri.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_sc.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_sd.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_tn.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_tx.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_ut.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_va.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_vt.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_wa.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_wi.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_wv.min.js" />
+    <Content Include="script\modules\zingchart-maps-usa_wy.min.js" />
+    <Content Include="script\modules\zingchart-maps-uzb.min.js" />
+    <Content Include="script\modules\zingchart-maps-ven.min.js" />
+    <Content Include="script\modules\zingchart-maps-vnm.min.js" />
+    <Content Include="script\modules\zingchart-maps-world-continents.min.js" />
+    <Content Include="script\modules\zingchart-maps-world-countries.min.js" />
+    <Content Include="script\modules\zingchart-maps-yem.min.js" />
+    <Content Include="script\modules\zingchart-maps-zaf.min.js" />
+    <Content Include="script\modules\zingchart-maps-zmb.min.js" />
+    <Content Include="script\modules\zingchart-maps-zwe.min.js" />
+    <Content Include="script\modules\zingchart-maps.min.js" />
+    <Content Include="script\modules\zingchart-nestedpie.min.js" />
+    <Content Include="script\modules\zingchart-objects.min.js" />
+    <Content Include="script\modules\zingchart-pareto.min.js" />
+    <Content Include="script\modules\zingchart-patterns.min.js" />
+    <Content Include="script\modules\zingchart-piano.min.js" />
+    <Content Include="script\modules\zingchart-pie.min.js" />
+    <Content Include="script\modules\zingchart-pie3d.min.js" />
+    <Content Include="script\modules\zingchart-populationpyramid.min.js" />
+    <Content Include="script\modules\zingchart-preview.min.js" />
+    <Content Include="script\modules\zingchart-r.min.js" />
+    <Content Include="script\modules\zingchart-radar.min.js" />
+    <Content Include="script\modules\zingchart-range.min.js" />
+    <Content Include="script\modules\zingchart-rankflow.min.js" />
+    <Content Include="script\modules\zingchart-refresh.min.js" />
+    <Content Include="script\modules\zingchart-scalemarkers.min.js" />
+    <Content Include="script\modules\zingchart-scatter.min.js" />
+    <Content Include="script\modules\zingchart-scroll.min.js" />
+    <Content Include="script\modules\zingchart-selection.min.js" />
+    <Content Include="script\modules\zingchart-stock.min.js" />
+    <Content Include="script\modules\zingchart-toolbar3d.min.js" />
+    <Content Include="script\modules\zingchart-tooltip.min.js" />
+    <Content Include="script\modules\zingchart-treemap.min.js" />
+    <Content Include="script\modules\zingchart-varea.min.js" />
+    <Content Include="script\modules\zingchart-vbar.min.js" />
+    <Content Include="script\modules\zingchart-vbar3d.min.js" />
+    <Content Include="script\modules\zingchart-vbullet.min.js" />
+    <Content Include="script\modules\zingchart-venn.min.js" />
+    <Content Include="script\modules\zingchart-vfunnel.min.js" />
+    <Content Include="script\modules\zingchart-vline.min.js" />
+    <Content Include="script\modules\zingchart-waterfall.min.js" />
+    <Content Include="script\modules\zingchart-wordcloud.min.js" />
+    <Content Include="script\modules\zingchart-xy.min.js" />
+    <Content Include="script\modules\zingchart-yx.min.js" />
+    <Content Include="script\modules\zingchart-zoom.min.js" />
+    <Content Include="script\moment.min.js" />
+    <Content Include="script\ncd-claimant.js" />
+    <Content Include="script\ncd-convergent-note.js" />
+    <Content Include="script\ncd-diary.js" />
+    <Content Include="script\ncd-edc.js" />
+    <Content Include="script\ncd-functions.js" />
+    <Content Include="script\ncd-settings-.js" />
+    <Content Include="script\ncd-settings-2013.10.25.1.js" />
+    <Content Include="script\ncd-settings-2013.10.25.2.js" />
+    <Content Include="script\ncd-settings-2013.11.14.1.js" />
+    <Content Include="script\ncd-settings-2013.11.14.2.js" />
+    <Content Include="script\ncd-settings-2013.9.11.1.js" />
+    <Content Include="script\ncd-settings-2013.9.11.2.js" />
+    <Content Include="script\ncd-settings-2013.9.11.3.js" />
+    <Content Include="script\ncd-settings-2013.9.23.1.js" />
+    <Content Include="script\ncd-settings-2013.9.23.2.js" />
+    <Content Include="script\ncd-settings-2013.9.24.1.js" />
+    <Content Include="script\ncd-settings-2014.01.10.1.js" />
+    <Content Include="script\ncd-settings-2014.02.25.1.js" />
+    <Content Include="script\ncd-settings-2014.02.25.2.js" />
+    <Content Include="script\ncd-settings-2014.02.26.1.js" />
+    <Content Include="script\ncd-settings-2014.04.09.1.js" />
+    <Content Include="script\ncd-settings-2014.04.09.2.js" />
+    <Content Include="script\ncd-settings-2014.04.10.1.js" />
+    <Content Include="script\ncd-settings-2014.04.25.1.js" />
+    <Content Include="script\ncd-settings-2014.05.08.1.js" />
+    <Content Include="script\ncd-settings-2014.06.07.1.js" />
+    <Content Include="script\ncd-settings-2014.06.27.1.js" />
+    <Content Include="script\ncd-settings-2014.06.30.1.js" />
+    <Content Include="script\ncd-settings-2014.06.30.2.js" />
+    <Content Include="script\ncd-settings-2014.07.04.1.js" />
+    <Content Include="script\ncd-settings-2014.07.04.2.js" />
+    <Content Include="script\ncd-settings-2014.07.11.1.js" />
+    <Content Include="script\ncd-settings-2014.07.11.2.js" />
+    <Content Include="script\ncd-settings-2014.07.11.3.js" />
+    <Content Include="script\ncd-settings-2014.07.11.4.js" />
+    <Content Include="script\ncd-settings-2017.06.11.1.js" />
+    <Content Include="script\ncd-settings-20170423.js" />
+    <Content Include="script\ncd-settings-admin.js" />
+    <Content Include="script\ncd-settings.js" />
+    <Content Include="script\ncd.multi-field-populate.js" />
+    <Content Include="script\ncd.settings.js" />
+    <Content Include="script\pdfmake.min.js" />
+    <Content Include="script\plugins\jqplot.barRenderer.js" />
+    <Content Include="script\plugins\jqplot.barRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.BezierCurveRenderer.js" />
+    <Content Include="script\plugins\jqplot.BezierCurveRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.blockRenderer.js" />
+    <Content Include="script\plugins\jqplot.blockRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.bubbleRenderer.js" />
+    <Content Include="script\plugins\jqplot.bubbleRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.canvasAxisLabelRenderer.js" />
+    <Content Include="script\plugins\jqplot.canvasAxisLabelRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.canvasAxisTickRenderer.js" />
+    <Content Include="script\plugins\jqplot.canvasAxisTickRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.canvasOverlay.js" />
+    <Content Include="script\plugins\jqplot.canvasOverlay.min.js" />
+    <Content Include="script\plugins\jqplot.canvasTextRenderer.js" />
+    <Content Include="script\plugins\jqplot.canvasTextRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.categoryAxisRenderer.js" />
+    <Content Include="script\plugins\jqplot.categoryAxisRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.ciParser.js" />
+    <Content Include="script\plugins\jqplot.ciParser.min.js" />
+    <Content Include="script\plugins\jqplot.cursor.js" />
+    <Content Include="script\plugins\jqplot.cursor.min.js" />
+    <Content Include="script\plugins\jqplot.dateAxisRenderer.js" />
+    <Content Include="script\plugins\jqplot.dateAxisRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.donutRenderer.js" />
+    <Content Include="script\plugins\jqplot.donutRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.dragable.js" />
+    <Content Include="script\plugins\jqplot.dragable.min.js" />
+    <Content Include="script\plugins\jqplot.enhancedLegendRenderer.js" />
+    <Content Include="script\plugins\jqplot.enhancedLegendRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.funnelRenderer.js" />
+    <Content Include="script\plugins\jqplot.funnelRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.highlighter.js" />
+    <Content Include="script\plugins\jqplot.highlighter.min.js" />
+    <Content Include="script\plugins\jqplot.json2.js" />
+    <Content Include="script\plugins\jqplot.json2.min.js" />
+    <Content Include="script\plugins\jqplot.logAxisRenderer.js" />
+    <Content Include="script\plugins\jqplot.logAxisRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.mekkoAxisRenderer.js" />
+    <Content Include="script\plugins\jqplot.mekkoAxisRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.mekkoRenderer.js" />
+    <Content Include="script\plugins\jqplot.mekkoRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.meterGaugeRenderer.js" />
+    <Content Include="script\plugins\jqplot.meterGaugeRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.mobile.js" />
+    <Content Include="script\plugins\jqplot.mobile.min.js" />
+    <Content Include="script\plugins\jqplot.ohlcRenderer.js" />
+    <Content Include="script\plugins\jqplot.ohlcRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.pieRenderer.js" />
+    <Content Include="script\plugins\jqplot.pieRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.pointLabels.js" />
+    <Content Include="script\plugins\jqplot.pointLabels.min.js" />
+    <Content Include="script\plugins\jqplot.pyramidAxisRenderer.js" />
+    <Content Include="script\plugins\jqplot.pyramidAxisRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.pyramidGridRenderer.js" />
+    <Content Include="script\plugins\jqplot.pyramidGridRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.pyramidRenderer.js" />
+    <Content Include="script\plugins\jqplot.pyramidRenderer.min.js" />
+    <Content Include="script\plugins\jqplot.trendline.js" />
+    <Content Include="script\plugins\jqplot.trendline.min.js" />
+    <Content Include="script\prettify.js" />
+    <Content Include="script\Silverlight.js" />
+    <Content Include="script\spin.js" />
+    <Content Include="script\superfish.js" />
+    <Content Include="script\superfish_new.js" />
+    <Content Include="script\supersubs.js" />
+    <Content Include="script\TableTools.min.js" />
+    <Content Include="script\themes\fusioncharts.theme.ais.js" />
+    <Content Include="script\themes\fusioncharts.theme.carbon.js" />
+    <Content Include="script\themes\fusioncharts.theme.convergent.js" />
+    <Content Include="script\themes\fusioncharts.theme.fint.js" />
+    <Content Include="script\themes\fusioncharts.theme.ocean.js" />
+    <Content Include="script\themes\fusioncharts.theme.zune.js" />
+    <Content Include="script\vfs_fonts.js" />
+    <Content Include="script\Visifire.js" />
+    <Content Include="script\XMLFile.xml" />
+    <Content Include="script\ZeroClipboard.js" />
+    <Content Include="script\zingchart-html5-min.js" />
+    <Content Include="script\zingchart-phantomjs-min.js" />
+    <Content Include="script\zingchart.jquery.min..js" />
+    <Content Include="script\zingchart.jquery.min.js" />
+    <Content Include="script\zingchart.min.js" />
+    <Content Include="Site\AdHocQuery.aspx" />
+    <Content Include="Site\DocumentImageManager.aspx" />
+    <Content Include="Site\DriverDashboard.aspx" />
+    <Content Include="Site\DriverSummaryScoreCard.aspx" />
+    <Content Include="Site\EditClaims.aspx" />
+    <Content Include="Site\EditSurveyResults.aspx" />
+    <Content Include="Site\EditDrivers.aspx" />
+    <Content Include="Site\EditData.aspx" />
+    <Content Include="Site\GeneralManagerClaims.aspx" />
+    <Content Include="Site\GeoMap.aspx" />
+    <Content Include="Site\GridDrilldown.aspx" />
+    <Content Include="Site\InternationalRates.aspx" />
+    <Content Include="Site\Invoices.aspx" />
+    <Content Include="Site\KPIDetails.aspx" />
+    <Content Include="Site\LaborerScoreCard.aspx" />
+    <Content Include="Site\LeadTransitTimes.aspx" />
+    <Content Include="Site\LoadBoardAcceptance.aspx" />
+    <Content Include="Site\MoveHappyCallTracker.aspx" />
+    <Content Include="Site\NCDClaimsReport.aspx" />
+    <Content Include="Site\NewHire.aspx" />
+    <Content Include="Site\OutstandingHaulerScoreCard.aspx" />
+    <Content Include="Site\OutstandingBookerScoreCard.aspx" />
+    <Content Include="Site\DeficientBookerScoreCard.aspx" />
+    <Content Include="Site\OriginAgentScoreCard.aspx" />
+    <Content Include="Site\DestinationAgentScoreCard.aspx" />
+    <Content Include="Site\DeficientSurveys.aspx" />
+    <Content Include="Site\DeficientHaulerScoreCard.aspx" />
+    <Content Include="Site\BookerScoreCard.aspx" />
+    <Content Include="Site\AgentScoreCard.aspx" />
+    <Content Include="Site\AISClaims.aspx" />
+    <Content Include="Site\CSRScoreCard.aspx" />
+    <Content Include="Site\ChartData.aspx" />
+    <Content Include="Site\ChartImage.aspx" />
+    <Content Include="Site\Claims.aspx" />
+    <Content Include="Site\ClaimsDashboard.aspx" />
+    <Content Include="Site\ClaimsData.aspx" />
+    <Content Include="Site\Company.aspx" />
+    <Content Include="Site\CSASafetyPoints.aspx" />
+    <Content Include="Site\CSRPoints.aspx" />
+    <Content Include="Site\Dashboard.aspx" />
+    <Content Include="Site\DriverTierRanking.aspx" />
+    <Content Include="Site\LytlesWorkbookEdit.aspx" />
+    <Content Include="Site\Page.aspx" />
+    <Content Include="Site\PDFViewer.aspx" />
+    <Content Include="Site\PVOPoints.aspx" />
+    <Content Include="Site\PVOScoreCard.aspx" />
+    <Content Include="Site\SurveyDetail.aspx" />
+    <Content Include="Site\SurveyResults.aspx" />
+    <Content Include="Site\TrendAnalysis.aspx" />
+    <Content Include="Site\WorldClassCommittment.aspx" />
+    <Content Include="UserControls\AISClaimsGrid.ascx" />
+    <Content Include="UserControls\AISDriverTierRanking.ascx" />
+    <Content Include="UserControls\AISSearchFilter.ascx" />
+    <Content Include="UserControls\NCDDocuments.ascx" />
+    <Content Include="UserControls\NCDEditGrid.ascx" />
+    <Content Include="UserControls\NCDEmail.ascx" />
+    <Content Include="UserControls\NCDImage.ascx" />
+    <Content Include="UserControls\NCDAdHocQuery.ascx" />
+    <Content Include="UserControls\NCDClaimsGrid.ascx" />
+    <Content Include="UserControls\NCDCompanyButtons.ascx" />
+    <Content Include="UserControls\NCDDeficiencyBlog.ascx" />
+    <Content Include="UserControls\NCDDisplayGrid.ascx" />
+    <Content Include="UserControls\NCDFusionChart.ascx" />
+    <Content Include="UserControls\NCDImageDocuments.ascx" />
+    <Content Include="UserControls\NCDLytlesWorkbookGrid.ascx" />
+    <Content Include="UserControls\NCDMap.ascx" />
+    <Content Include="UserControls\NCDNewHire.ascx" />
+    <Content Include="UserControls\NCDRatingTrackerGrid.ascx" />
+    <Content Include="UserControls\NCDReportingCtrl.ascx" />
+    <Content Include="UserControls\NCDSearchGrid.ascx" />
+    <Content Include="UserControls\NCDSearchGridBasic.ascx" />
+    <Content Include="UserControls\SearchFilter.ascx" />
+    <Content Include="ViewerJS\AGPL-3.0.txt" />
+    <Content Include="ViewerJS\compatibility.js" />
+    <Content Include="ViewerJS\example.local.css" />
+    <Content Include="ViewerJS\images\kogmbh.png" />
+    <Content Include="ViewerJS\images\nlnet.png" />
+    <Content Include="ViewerJS\images\texture.png" />
+    <Content Include="ViewerJS\images\toolbarButton-download.png" />
+    <Content Include="ViewerJS\images\toolbarButton-fullscreen.png" />
+    <Content Include="ViewerJS\images\toolbarButton-menuArrows.png" />
+    <Content Include="ViewerJS\images\toolbarButton-pageDown.png" />
+    <Content Include="ViewerJS\images\toolbarButton-pageUp.png" />
+    <Content Include="ViewerJS\images\toolbarButton-presentation.png" />
+    <Content Include="ViewerJS\images\toolbarButton-zoomIn.png" />
+    <Content Include="ViewerJS\images\toolbarButton-zoomOut.png" />
+    <Content Include="ViewerJS\index.html" />
+    <Content Include="ViewerJS\ODFViewerPlugin.css" />
+    <Content Include="ViewerJS\ODFViewerPlugin.js" />
+    <Content Include="ViewerJS\pdf.js" />
+    <Content Include="ViewerJS\pdf.worker.js" />
+    <Content Include="ViewerJS\pdfjsversion.js" />
+    <Content Include="ViewerJS\PDFViewerPlugin.css" />
+    <Content Include="ViewerJS\PDFViewerPlugin.js" />
+    <Content Include="ViewerJS\pdf_find_bar.js" />
+    <Content Include="ViewerJS\pdf_find_controller.js" />
+    <Content Include="ViewerJS\PluginLoader.js" />
+    <Content Include="ViewerJS\text_layer_builder.js" />
+    <Content Include="ViewerJS\ui_utils.js" />
+    <Content Include="ViewerJS\viewer.css" />
+    <Content Include="ViewerJS\viewer.js" />
+    <Content Include="ViewerJS\webodf.js" />
+    <Content Include="WCCDetail.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="xml\3d column.xml" />
+    <Content Include="xml\3d column4.xml" />
+    <Content Include="xml\3d pie.xml" />
+    <Content Include="xml\3dpietest.xml" />
+    <Content Include="xml\area.xml" />
+    <Content Include="xml\bar.xml" />
+    <Content Include="xml\chart.xml" />
+    <Content Include="xml\Data.xml" />
+    <Content Include="xml\data2.xml" />
+    <Content Include="xml\line.xml" />
+    <Content Include="xml\pie.xml" />
+    <Content Include="xml\QueryTranslation.xml" />
+    <Content Include="xml\Sample2.xml" />
+    <Content Include="xml\SearchFields.xml" />
+    <Content Include="xml\stacked 3d column.xml" />
+    <Content Include="xml\stacked column.xml" />
+    <Content Include="xml\SurveyDataMap.xml" />
+    <Content Include="xml\WordMLExport.xml" />
+    <Content Include="xml\XMLFile.xml" />
+    <Content Include="xslt\NelsonWesterberg.xsl" />
+    <Content Include="xslt\QualPerfDetailByDriver_1.xsl" />
+    <Content Include="xslt\QualPerfDetailByDriver_10000.xsl" />
+    <Content Include="xslt\Sample.xml" />
+    <Content Include="xslt\Template.xslt" />
+    <Content Include="xslt\XSLTFile.xsl" />
+    <Content Include="xslt\XSLTFile2.xsl" />
+    <Content Include="Site\MasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\AISData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="App_Code\DataQuery.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.6.2.AssemblyAttributes.cs" />
+    <Compile Include="Site\RatingTracker.aspx.cs">
+      <DependentUpon>RatingTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\RatingTracker.aspx.designer.cs">
+      <DependentUpon>RatingTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ReportingArea.aspx.cs">
+      <DependentUpon>ReportingArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ReportingArea.aspx.designer.cs">
+      <DependentUpon>ReportingArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ScoreCard.aspx.cs">
+      <DependentUpon>ScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ScoreCard.aspx.designer.cs">
+      <DependentUpon>ScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\SCACScoreCard.aspx.cs">
+      <DependentUpon>SCACScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\SCACScoreCard.aspx.designer.cs">
+      <DependentUpon>SCACScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\TrendAnalysis.aspx.cs">
+      <DependentUpon>TrendAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\TrendAnalysis.aspx.designer.cs">
+      <DependentUpon>TrendAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\WorldClassCommittment.aspx.cs">
+      <DependentUpon>WorldClassCommittment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\WorldClassCommittment.aspx.designer.cs">
+      <DependentUpon>WorldClassCommittment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDReportingCtrl.ascx.cs">
+      <DependentUpon>NCDReportingCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDReportingCtrl.ascx.designer.cs">
+      <DependentUpon>NCDReportingCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WCCDetail.aspx.cs">
+      <DependentUpon>WCCDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WCCDetail.aspx.designer.cs">
+      <DependentUpon>WCCDetail.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\AISRest.cs" />
+    <Compile Include="App_Code\AISRestContracts.cs" />
+    <Content Include="App_Code\AISWS.cs">
+      <SubType>Component</SubType>
+    </Content>
+    <Compile Include="App_Code\AIS_DataSet.cs" />
+    <Compile Include="App_Code\ASPNetChartMaker.cs" />
+    <Compile Include="App_Code\CalendarAppointment.cs" />
+    <Compile Include="App_Code\CanvasJS.cs" />
+    <Compile Include="App_Code\CanvasJSData.cs" />
+    <Compile Include="App_Code\ChecksDataSet.cs" />
+    <Compile Include="App_Code\ChildFieldEvent.cs" />
+    <Compile Include="App_Code\ClaimsPickListFieldMap.cs" />
+    <Compile Include="App_Code\CompanyInfo.cs" />
+    <Compile Include="App_Code\ControlFinder.cs" />
+    <Compile Include="App_Code\CssAdder.cs" />
+    <Compile Include="App_Code\DataSet1.cs" />
+    <Compile Include="App_Code\DriverScoreCard.cs" />
+    <Compile Include="App_Code\DriverScoreCardDetails.cs" />
+    <None Include="App_Code\FusionChartsQuery.cs" />
+    <Compile Include="App_Code\GridData.cs" />
+    <Compile Include="App_Code\HeaderPageEvent.cs" />
+    <Compile Include="App_Code\HighChartData.cs" />
+    <Compile Include="App_Code\HighChartsBuilder.cs" />
+    <Compile Include="App_Code\IAISData.cs" />
+    <Content Include="App_Code\IAISRest.cs" />
+    <Compile Include="App_Code\IPdfGenerator.cs" />
+    <Compile Include="App_Code\JSONDBQuery.cs" />
+    <Compile Include="App_Code\NCDDiaries.cs" />
+    <Compile Include="App_Code\NCDDiary.cs" />
+    <Compile Include="App_Code\NCDDocument.cs" />
+    <Content Include="App_Code\NCDEmailMessage.cs" />
+    <Compile Include="App_Code\NCDClaimant.cs" />
+    <Compile Include="App_Code\NCDClaimants.cs" />
+    <Compile Include="App_Code\NCDClaimCheck.cs" />
+    <Compile Include="App_Code\NCDCSSWeeklyMetric.cs" />
+    <Compile Include="App_Code\NCDCSSWeeklyMetrics.cs" />
+    <Compile Include="App_Code\FieldGroupList.cs" />
+    <Compile Include="App_Code\NCDPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\NCDPrint.cs" />
+    <Compile Include="App_Code\NCDUser.cs" />
+    <Compile Include="App_Code\NCDSmsSender.cs" />
+    <Compile Include="App_Code\NCDUserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\NCDUsers.cs" />
+    <Compile Include="App_Code\NCDViolationReason.cs" />
+    <Compile Include="App_Code\NCDViolationReasons.cs" />
+    <Compile Include="App_Code\SavedQuery.cs" />
+    <Compile Include="App_Code\SurveyComment.cs" />
+    <Compile Include="App_Code\ToastrExtension.cs" />
+    <Compile Include="App_Code\UserLog.cs" />
+    <Compile Include="App_Code\_reports_aismgtDataSet.cs" />
+    <Compile Include="App_Code\WkHtmlToPdfGenerator.cs" />
+    <Compile Include="App_Code\ZingChartAnimation.cs" />
+    <Compile Include="App_Code\ZingChartData.cs" />
+    <Compile Include="App_Code\ZingChartGuide.cs" />
+    <Compile Include="App_Code\ZingChartItem.cs" />
+    <Compile Include="App_Code\ZingChartLabel.cs" />
+    <Compile Include="App_Code\ZingChartLegend.cs" />
+    <Compile Include="App_Code\ZingChartParameters.cs" />
+    <Compile Include="App_Code\ZingChartPlot.cs" />
+    <Compile Include="App_Code\ZingChartPlotArea.cs" />
+    <Compile Include="App_Code\ZingChartScaleX.cs" />
+    <Compile Include="App_Code\ZingChartScaleY.cs" />
+    <Compile Include="App_Code\ZingChartSeriesData.cs" />
+    <Compile Include="App_Code\SoapAuth.cs" />
+    <Compile Include="App_Code\PickListFieldMap.cs" />
+    <Compile Include="Chart.aspx.cs">
+      <DependentUpon>Chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart.aspx.designer.cs">
+      <DependentUpon>Chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSExport.aspx.cs">
+      <DependentUpon>CMSExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSExport.aspx.designer.cs">
+      <DependentUpon>CMSExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertHtmlToPDF.aspx.cs">
+      <DependentUpon>ConvertHtmlToPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConvertHtmlToPDF.aspx.designer.cs">
+      <DependentUpon>ConvertHtmlToPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateICS.aspx.cs">
+      <DependentUpon>CreateICS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateICS.aspx.designer.cs">
+      <DependentUpon>CreateICS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSRPointsDetail.aspx.cs">
+      <DependentUpon>CSRPointsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSRPointsDetail.aspx.designer.cs">
+      <DependentUpon>CSRPointsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSWeeklyDetail.aspx.cs">
+      <DependentUpon>CSSWeeklyDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSWeeklyDetail.aspx.designer.cs">
+      <DependentUpon>CSSWeeklyDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSViolationTypesDetail.aspx.cs">
+      <DependentUpon>CSViolationTypesDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSViolationTypesDetail.aspx.designer.cs">
+      <DependentUpon>CSViolationTypesDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.Master.cs">
+      <DependentUpon>default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.Master.designer.cs">
+      <DependentUpon>default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DeficientSurveyComments.aspx.cs">
+      <DependentUpon>DeficientSurveyComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeficientSurveyComments.aspx.designer.cs">
+      <DependentUpon>DeficientSurveyComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage.aspx.cs">
+      <DependentUpon>PrintPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage.aspx.designer.cs">
+      <DependentUpon>PrintPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PVOPointsDetail.aspx.cs">
+      <DependentUpon>PVOPointsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PVOPointsDetail.aspx.designer.cs">
+      <DependentUpon>PVOPointsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SafetyPointsDetail.aspx.cs">
+      <DependentUpon>SafetyPointsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SafetyPointsDetail.aspx.designer.cs">
+      <DependentUpon>SafetyPointsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Documents.aspx.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Documents.aspx.designer.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverSafetyPointsDetail.aspx.cs">
+      <DependentUpon>DriverSafetyPointsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverSafetyPointsDetail.aspx.designer.cs">
+      <DependentUpon>DriverSafetyPointsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportToExcel.aspx.cs">
+      <DependentUpon>ExportToExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportToExcel.aspx.designer.cs">
+      <DependentUpon>ExportToExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFile.aspx.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetFile.aspx.designer.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVLAiresSurveyResultsModel.cs" />
+    <Compile Include="Models\AVLAtlasVanlinesSurveyResultsModel.cs" />
+    <Compile Include="Models\AVLCharterSurveyResultsModel.cs" />
+    <Compile Include="Models\AVLMMISurveyResultsModel.cs" />
+    <Compile Include="Models\AVLRMWSurveyResultsModel.cs" />
+    <Compile Include="Models\AVLSurveyResultsModel.cs" />
+    <Compile Include="Models\NWConsolidatedSurveyResultsModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site\AdHocQuery.aspx.cs">
+      <DependentUpon>AdHocQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\AdHocQuery.aspx.designer.cs">
+      <DependentUpon>AdHocQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DocumentImageManager.aspx.cs">
+      <DependentUpon>DocumentImageManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DocumentImageManager.aspx.designer.cs">
+      <DependentUpon>DocumentImageManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DriverDashboard.aspx.cs">
+      <DependentUpon>DriverDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DriverDashboard.aspx.designer.cs">
+      <DependentUpon>DriverDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DriverSummaryScoreCard.aspx.cs">
+      <DependentUpon>DriverSummaryScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DriverSummaryScoreCard.aspx.designer.cs">
+      <DependentUpon>DriverSummaryScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\EditClaims.aspx.cs">
+      <DependentUpon>EditClaims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\EditClaims.aspx.designer.cs">
+      <DependentUpon>EditClaims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\EditSurveyResults.aspx.cs">
+      <DependentUpon>EditSurveyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\EditSurveyResults.aspx.designer.cs">
+      <DependentUpon>EditSurveyResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\EditDrivers.aspx.cs">
+      <DependentUpon>EditDrivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\EditDrivers.aspx.designer.cs">
+      <DependentUpon>EditDrivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\EditData.aspx.cs">
+      <DependentUpon>EditData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\EditData.aspx.designer.cs">
+      <DependentUpon>EditData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\GeneralManagerClaims.aspx.cs">
+      <DependentUpon>GeneralManagerClaims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\GeneralManagerClaims.aspx.designer.cs">
+      <DependentUpon>GeneralManagerClaims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\GeoMap.aspx.cs">
+      <DependentUpon>GeoMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\GeoMap.aspx.designer.cs">
+      <DependentUpon>GeoMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\GridDrilldown.aspx.cs">
+      <DependentUpon>GridDrilldown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\GridDrilldown.aspx.designer.cs">
+      <DependentUpon>GridDrilldown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\InternationalRates.aspx.cs">
+      <DependentUpon>InternationalRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\InternationalRates.aspx.designer.cs">
+      <DependentUpon>InternationalRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Invoices.aspx.cs">
+      <DependentUpon>Invoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Invoices.aspx.designer.cs">
+      <DependentUpon>Invoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\KPIDetails.aspx.cs">
+      <DependentUpon>KPIDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\KPIDetails.aspx.designer.cs">
+      <DependentUpon>KPIDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\LaborerScoreCard.aspx.cs">
+      <DependentUpon>LaborerScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\LaborerScoreCard.aspx.designer.cs">
+      <DependentUpon>LaborerScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\LeadTransitTimes.aspx.cs">
+      <DependentUpon>LeadTransitTimes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\LeadTransitTimes.aspx.designer.cs">
+      <DependentUpon>LeadTransitTimes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\LoadBoardAcceptance.aspx.cs">
+      <DependentUpon>LoadBoardAcceptance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\LoadBoardAcceptance.aspx.designer.cs">
+      <DependentUpon>LoadBoardAcceptance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\MoveHappyCallTracker.aspx.cs">
+      <DependentUpon>MoveHappyCallTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\MoveHappyCallTracker.aspx.designer.cs">
+      <DependentUpon>MoveHappyCallTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\NCDClaimsReport.aspx.cs">
+      <DependentUpon>NCDClaimsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\NCDClaimsReport.aspx.designer.cs">
+      <DependentUpon>NCDClaimsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\NewHire.aspx.cs">
+      <DependentUpon>NewHire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\NewHire.aspx.designer.cs">
+      <DependentUpon>NewHire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\OutstandingHaulerScoreCard.aspx.cs">
+      <DependentUpon>OutstandingHaulerScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\OutstandingHaulerScoreCard.aspx.designer.cs">
+      <DependentUpon>OutstandingHaulerScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\OutstandingBookerScoreCard.aspx.cs">
+      <DependentUpon>OutstandingBookerScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\OutstandingBookerScoreCard.aspx.designer.cs">
+      <DependentUpon>OutstandingBookerScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DeficientBookerScoreCard.aspx.cs">
+      <DependentUpon>DeficientBookerScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DeficientBookerScoreCard.aspx.designer.cs">
+      <DependentUpon>DeficientBookerScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\OriginAgentScoreCard.aspx.cs">
+      <DependentUpon>OriginAgentScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\OriginAgentScoreCard.aspx.designer.cs">
+      <DependentUpon>OriginAgentScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DestinationAgentScoreCard.aspx.cs">
+      <DependentUpon>DestinationAgentScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DestinationAgentScoreCard.aspx.designer.cs">
+      <DependentUpon>DestinationAgentScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DeficientSurveys.aspx.cs">
+      <DependentUpon>DeficientSurveys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DeficientSurveys.aspx.designer.cs">
+      <DependentUpon>DeficientSurveys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DeficientHaulerScoreCard.aspx.cs">
+      <DependentUpon>DeficientHaulerScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DeficientHaulerScoreCard.aspx.designer.cs">
+      <DependentUpon>DeficientHaulerScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\BookerScoreCard.aspx.cs">
+      <DependentUpon>BookerScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\BookerScoreCard.aspx.designer.cs">
+      <DependentUpon>BookerScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\AgentScoreCard.aspx.cs">
+      <DependentUpon>AgentScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\AgentScoreCard.aspx.designer.cs">
+      <DependentUpon>AgentScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\AISClaims.aspx.cs">
+      <DependentUpon>AISClaims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\AISClaims.aspx.designer.cs">
+      <DependentUpon>AISClaims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\CSRScoreCard.aspx.cs">
+      <DependentUpon>CSRScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\CSRScoreCard.aspx.designer.cs">
+      <DependentUpon>CSRScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ChartData.aspx.cs">
+      <DependentUpon>ChartData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ChartData.aspx.designer.cs">
+      <DependentUpon>ChartData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ChartImage.aspx.cs">
+      <DependentUpon>ChartImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ChartImage.aspx.designer.cs">
+      <DependentUpon>ChartImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Claims.aspx.cs">
+      <DependentUpon>Claims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Claims.aspx.designer.cs">
+      <DependentUpon>Claims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ClaimsDashboard.aspx.cs">
+      <DependentUpon>ClaimsDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ClaimsDashboard.aspx.designer.cs">
+      <DependentUpon>ClaimsDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ClaimsData.aspx.cs">
+      <DependentUpon>ClaimsData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ClaimsData.aspx.designer.cs">
+      <DependentUpon>ClaimsData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\CSASafetyPoints.aspx.cs">
+      <DependentUpon>CSASafetyPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\CSASafetyPoints.aspx.designer.cs">
+      <DependentUpon>CSASafetyPoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\CSRPoints.aspx.cs">
+      <DependentUpon>CSRPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\CSRPoints.aspx.designer.cs">
+      <DependentUpon>CSRPoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DriverTierRanking.aspx.cs">
+      <DependentUpon>DriverTierRanking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DriverTierRanking.aspx.designer.cs">
+      <DependentUpon>DriverTierRanking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\LytlesWorkbookEdit.aspx.cs">
+      <DependentUpon>LytlesWorkbookEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\LytlesWorkbookEdit.aspx.designer.cs">
+      <DependentUpon>LytlesWorkbookEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\PDFViewer.aspx.cs">
+      <DependentUpon>PDFViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\PDFViewer.aspx.designer.cs">
+      <DependentUpon>PDFViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\PVOPoints.aspx.cs">
+      <DependentUpon>PVOPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\PVOPoints.aspx.designer.cs">
+      <DependentUpon>PVOPoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\PVOScoreCard.aspx.cs">
+      <DependentUpon>PVOScoreCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\PVOScoreCard.aspx.designer.cs">
+      <DependentUpon>PVOScoreCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\SurveyDetail.aspx.cs">
+      <DependentUpon>SurveyDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\SurveyDetail.aspx.designer.cs">
+      <DependentUpon>SurveyDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\SurveyResults.aspx.cs">
+      <DependentUpon>SurveyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\SurveyResults.aspx.designer.cs">
+      <DependentUpon>SurveyResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AISClaimsGrid.ascx.cs">
+      <DependentUpon>AISClaimsGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AISClaimsGrid.ascx.designer.cs">
+      <DependentUpon>AISClaimsGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AISDriverTierRanking.ascx.cs">
+      <DependentUpon>AISDriverTierRanking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AISDriverTierRanking.ascx.designer.cs">
+      <DependentUpon>AISDriverTierRanking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AISSearchFilter.ascx.cs">
+      <DependentUpon>AISSearchFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AISSearchFilter.ascx.designer.cs">
+      <DependentUpon>AISSearchFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDDocuments.ascx.cs">
+      <DependentUpon>NCDDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDDocuments.ascx.designer.cs">
+      <DependentUpon>NCDDocuments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDEditGrid.ascx.cs">
+      <DependentUpon>NCDEditGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDEditGrid.ascx.designer.cs">
+      <DependentUpon>NCDEditGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDEmail.ascx.cs">
+      <DependentUpon>NCDEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDEmail.ascx.designer.cs">
+      <DependentUpon>NCDEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDImage.ascx.cs">
+      <DependentUpon>NCDImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDImage.ascx.designer.cs">
+      <DependentUpon>NCDImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDAdHocQuery.ascx.cs">
+      <DependentUpon>NCDAdHocQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDAdHocQuery.ascx.designer.cs">
+      <DependentUpon>NCDAdHocQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDClaimsGrid.ascx.cs">
+      <DependentUpon>NCDClaimsGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDClaimsGrid.ascx.designer.cs">
+      <DependentUpon>NCDClaimsGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDCompanyButtons.ascx.cs">
+      <DependentUpon>NCDCompanyButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDCompanyButtons.ascx.designer.cs">
+      <DependentUpon>NCDCompanyButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDDeficiencyBlog.ascx.cs">
+      <DependentUpon>NCDDeficiencyBlog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDDeficiencyBlog.ascx.designer.cs">
+      <DependentUpon>NCDDeficiencyBlog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDDisplayGrid.ascx.cs">
+      <DependentUpon>NCDDisplayGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDDisplayGrid.ascx.designer.cs">
+      <DependentUpon>NCDDisplayGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDFusionChart.ascx.cs">
+      <DependentUpon>NCDFusionChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDFusionChart.ascx.designer.cs">
+      <DependentUpon>NCDFusionChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDImageDocuments.ascx.cs">
+      <DependentUpon>NCDImageDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDImageDocuments.ascx.designer.cs">
+      <DependentUpon>NCDImageDocuments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDLytlesWorkbookGrid.ascx.cs">
+      <DependentUpon>NCDLytlesWorkbookGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDLytlesWorkbookGrid.ascx.designer.cs">
+      <DependentUpon>NCDLytlesWorkbookGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDMap.ascx.cs">
+      <DependentUpon>NCDMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDMap.ascx.designer.cs">
+      <DependentUpon>NCDMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDNewHire.ascx.cs">
+      <DependentUpon>NCDNewHire.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDNewHire.ascx.designer.cs">
+      <DependentUpon>NCDNewHire.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDRatingTrackerGrid.ascx.cs">
+      <DependentUpon>NCDRatingTrackerGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDRatingTrackerGrid.ascx.designer.cs">
+      <DependentUpon>NCDRatingTrackerGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDSearchGrid.ascx.cs">
+      <DependentUpon>NCDSearchGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDSearchGrid.ascx.designer.cs">
+      <DependentUpon>NCDSearchGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCDSearchGridBasic.ascx.cs">
+      <DependentUpon>NCDSearchGridBasic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCDSearchGridBasic.ascx.designer.cs">
+      <DependentUpon>NCDSearchGridBasic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchFilter.ascx.cs">
+      <DependentUpon>SearchFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchFilter.ascx.designer.cs">
+      <DependentUpon>SearchFilter.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.Master" />
+    <Content Include="charts\charts_library\.DS_Store" />
+    <Content Include="ckeditor\.htaccess" />
+    <Content Include="ClientBin\QueryTool.xap" />
+    <Content Include="ClientBin\QueryTool.xap.2012.02.08" />
+    <Content Include="ClientBin\QueryTool.xap.old" />
+    <Content Include="Content\DataTables\images\Sorting icons.psd" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="docs\avail-help.pdf" />
+    <Content Include="docs\AvailCartusShipmentAllocationPerformanceMetrics 4-2-15.pdf" />
+    <Content Include="fonts\MODERNE SANS.ttf" />
+    <Content Include="FoTemp\aasf02132019.xls" />
+    <Content Include="FoTemp\arswcc03042019a.xls" />
+    <Content Include="FoTemp\arswcc04182019a.xls" />
+    <Content Include="FoTemp\atlanticatlasimport01282019.xls" />
+    <Content Include="FoTemp\atlanticwcc03212019.xls" />
+    <Content Include="FoTemp\dmsshipment02192023a.xls" />
+    <Content Include="FoTemp\GMIIimport06192019.xls" />
+    <Content Include="FoTemp\lytlesshipment01302023.xls" />
+    <Content Include="FoTemp\lytlesshipment02272023.xls" />
+    <Content Include="FoTemp\lytlesshipmentfile01152019.xls" />
+    <Content Include="FoTemp\LYTLESSHIPMENTFILE03042019.xls" />
+    <Content Include="FoTemp\NATIONALUPLOAD01042022.xls" />
+    <Content Include="FoTemp\NFC File.xlsx" />
+    <Content Include="FoTemp\NFCFile.xls" />
+    <Content Include="FoTemp\NFCFile.xlsx" />
+    <Content Include="FoTemp\nwimport07262019a.xls" />
+    <Content Include="FoTemp\nwimport07262019new.xls" />
+    <Content Include="FoTemp\nwjj10042019.xls" />
+    <Content Include="FoTemp\nwupload04142023.xls" />
+    <Content Include="FoTemp\nwupload04242023a.xls" />
+    <Content Include="FoTemp\wcc03032022.xls" />
+    <None Include="packages.config" />
+    <Content Include="script\2V-CheatSheet-062817.pdf" />
+    <Content Include="script\DataTables.zip" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\common.scss" />
+    <Content Include="script\DataTables\Buttons-1.2.1\css\mixins.scss" />
+    <Content Include="script\ncd-settings.js.bak" />
+    <Content Include="script\Visifire.js.old" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="reports\ACE_Consolidated_CSRReportCard - Backup.rdlc" />
+    <EmbeddedResource Include="reports\ACE_Consolidated_CSRReportCard.rdlc" />
+    <EmbeddedResource Include="reports\ACE_Consolidated_DriverReportCard.rdlc" />
+    <EmbeddedResource Include="reports\ACE_Consolidated_HaulerReportCard.rdlc" />
+    <EmbeddedResource Include="reports\ARS_BranchDeficiencyReportCard.rdlc" />
+    <EmbeddedResource Include="reports\ARS_CSRReportCard.rdlc" />
+    <EmbeddedResource Include="reports\ARS_DriverReportCard.rdlc" />
+    <EmbeddedResource Include="reports\ARS_OutstandingBranchReportCard.rdlc" />
+    <EmbeddedResource Include="reports\CheckPrinting - Copy.rdlc" />
+    <EmbeddedResource Include="reports\CheckPrinting.rdlc" />
+    <EmbeddedResource Include="reports\Copy of QualPerfDetailByDriver.rdlc" />
+    <EmbeddedResource Include="reports\Demo_CSRReportCard.rdlc" />
+    <EmbeddedResource Include="reports\Demo_DriverReportCard.rdlc" />
+    <EmbeddedResource Include="reports\DMS_QualPerfDetailByDriver.rdlc" />
+    <EmbeddedResource Include="reports\DriverSumRptByLocation.rdlc" />
+    <EmbeddedResource Include="reports\Mesa_CSRReportCard.rdlc" />
+    <EmbeddedResource Include="reports\Mesa_DestinationAgentReportCard.rdlc" />
+    <EmbeddedResource Include="reports\Mesa_DriverReportCard.rdlc" />
+    <EmbeddedResource Include="reports\Mesa_OriginAgentReportCard.rdlc" />
+    <EmbeddedResource Include="reports\NW_Group_QualityPerfByClient.rdlc" />
+    <EmbeddedResource Include="reports\NW_Group_QualityPerfByCSR.rdlc" />
+    <EmbeddedResource Include="reports\NW_Group_QualityPerfByDriver.rdlc" />
+    <EmbeddedResource Include="reports\NW_Group_QualityPerfDetailByClient.rdlc" />
+    <EmbeddedResource Include="reports\NW_Group_QualityPerfDetailByCSR.rdlc" />
+    <EmbeddedResource Include="reports\NW_Group_QualityPerfDetailByDriver.rdlc" />
+    <EmbeddedResource Include="reports\PrintCheck - Copy.rdlc" />
+    <EmbeddedResource Include="reports\PrintCheck-Old.rdlc" />
+    <EmbeddedResource Include="reports\PrintCheck.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfByClientName.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfByClientNameDemo.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfByCSR.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfByDriver.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfDetailByClient.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfDetailByCSR.rdlc" />
+    <EmbeddedResource Include="reports\QualPerfDetailByDriver.rdlc" />
+    <EmbeddedResource Include="reports\SurveyDetails.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56316</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56316/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

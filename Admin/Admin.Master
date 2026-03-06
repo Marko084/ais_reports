@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="AISReports.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" src="../script/jquery-1.6.2.min.js"></script>
+      <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.js"></script>
+     <link rel="stylesheet" href="../fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+     <script type="text/javascript" src="../script/jquery-ui-1.8.16.custom.min.js"></script>
+    <link rel="stylesheet" href="../css/redmond/jquery-ui-1.9.2_20140508.custom.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="../script/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../script/dataTables.scroller.min.js"></script>
+    <script type="text/javascript" src="../script/TableTools.min.js"></script>
+    <script type="text/javascript" src="../script/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="../script/jquery.tabSlideOut.v1.3.js"></script>
+    <link rel="stylesheet" href="../css/TableTools_JUI.css" type="text/css" />
+    <link href="../Content/DataTables/css/demo_table_jui.css" rel="stylesheet" />
+    <script type="text/javascript" src="../script/json2.js"></script>
+    <link href="../css/redmond/master-styles.css" rel="stylesheet" type="text/css" />
+    <link href="../css/menu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$.fn.dataTable.moment( 'MM/DD/YYYY' );
+            $(".btn-style").button();
+            $(":submit").button();
+        });
+    </script>
+    <style type="text/css">
+        body {font:small; font-family:Calibri, Arial;}
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

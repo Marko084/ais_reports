@@ -1,0 +1,1222 @@
+/* styles by tag name. */
+.ReportGrid
+{
+    font-size:12px;  
+    font-family:Arial;  
+    
+}
+
+.ReportHeader
+{
+    font-weight:bold;
+    color:#ffffff;
+    background-color:Navy;
+}
+
+.ReportRow
+{
+    background-color:Yellow;
+    color:#000000;
+}
+
+.ReportAltRow
+{
+    background-color:#ffffff;
+    color:#000000;
+}
+
+.SurveySection
+{
+    margin:15px 0px 15px 15px;
+}
+
+.SurveyAnswer
+{
+    margin:0px 0px 10px 0px;
+}
+/*
+a:visited
+{
+	color:#ffffff;
+	font-weight:bold;
+}
+a:hover
+{
+	color:#ffffff;
+	font-weight:bold;
+}
+a:active
+{
+	color:#ffffff;
+	font-weight:bold;
+}
+ 
+a:link
+{
+	color:#ffffff;
+	font-weight:bold;
+}
+*/
+
+
+.reportLinks
+{
+	color:Blue;
+	text-decoration:underline;
+	font-family: Arial;
+	cursor:hand;
+	font-weight:bold;
+}
+body
+{
+/*	background-image:url('../images/asi_bkgd.jpg');
+	background-repeat:repeat-x;
+	background-position:left top;
+	height:110%;
+	text-align:center; */
+}
+
+/* home page styles. */
+#BodyArea
+{
+	width:708px;
+	text-align:center;
+	margin: 0 auto;
+	
+}
+
+#Bullet1
+{
+	width:342px;
+	height:53px;
+	background-image:url('../images/bullet1.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Bullet2
+{
+	width:365px;
+	height:53px;
+	background-image:url('../images/bullet2.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Bullet3
+{
+	width:342px;
+	height:30px;
+	background-image:url('../images/bullet3.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Bullet4
+{
+	width:365px;
+	height:30px;
+	background-image:url('../images/bullet4.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#BulletBottom
+{
+	width:707px;
+}
+
+#BulletTop
+{
+	width:707px;
+}
+
+#ButtonArea
+{
+	width:707px;
+}
+
+#ButtonLeft
+{
+	height:56px;
+	width:215px;
+	background-image:url('../images/login_photo_lcorner.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#ButtonMiddle
+{
+	height:56px;
+	width:260px;
+	background-image:url('../images/login_button.jpg');
+	background-repeat:no-repeat;
+	float:left;
+	cursor:hand;
+}
+
+#ButtonRight
+{
+	height:56px;
+	width:232px;
+	background-image:url('../images/login_photo_rcorner.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#FooterArea
+{
+	width:707px;
+}
+
+#FooterLeft
+{
+	height:83px;
+	width:238px;
+	background-image:url('../images/contact_left.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#FooterMiddle
+{
+	height:83px;
+	width:228px;
+	background-image:url('../images/contact_us.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#FooterRight
+{
+	height:83px;
+	width:241px;
+	background-image:url('../images/contact_right.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#ImageArea
+{
+	width:707px;
+}
+
+#Main
+{
+	width:707px;
+}
+
+#PageTitle
+{
+	font-family:Tahoma, Arial;
+	font-size:12pt;
+	font-weight:bold;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+#Photo1
+{
+	height:279px;
+	width:78px;
+	background-image:url('../images/login_photo1.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+#Photo2
+{
+	height:279px;
+	width:72px;
+	background-image:url('../images/login_photo2.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo3
+{
+	height:279px;
+	width:73px;
+	background-image:url('../images/login_photo3.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo4
+{
+	height:279px;
+	width:64px;
+	background-image:url('../images/login_photo4.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo5
+{
+	height:279px;
+	width:64px;
+	background-image:url('../images/login_photo5.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo6
+{
+	height:279px;
+	width:64px;
+	background-image:url('../images/login_photo6.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo7
+{
+	height:279px;
+	width:60px;
+	background-image:url('../images/login_photo7.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo8
+{
+	height:279px;
+	width:62px;
+	background-image:url('../images/login_photo8.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo9
+{
+	height:279px;
+	width:63px;
+	background-image:url('../images/login_photo9.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo10
+{
+	height:279px;
+	width:49px;
+	background-image:url('../images/login_photo10.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#Photo11
+{
+	height:279px;
+	width:58px;
+	background-image:url('../images/login_photo11.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#SpacerArea
+{
+	width:707px;
+}
+
+#SpacerLeft
+{
+	height:50px;
+	width:215px;
+	background-image:url('../images/spacer_left.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#SpacerMiddle
+{
+	height:50px;
+	width:260px;
+	background-image:url('../images/spacer_middle.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#SpacerRight
+{
+	height:50px;
+	width:232px;
+	background-image:url('../images/spacer_right.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#TopBar
+{
+	height:1px;
+	background-image:url('../images/top_bkgd.jpg');
+	background-repeat:repeat;
+}
+
+#TopLeft
+{
+	height:70px;
+	width:113px;
+	background-image:url('../images/asi_logo.jpg');
+	background-repeat:no-repeat;
+	float:left;
+	
+}
+
+#TopMiddle
+{
+	height:70px;
+	width:487px;
+	background-image:url('../images/asi_title.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#TopRight
+{
+	height:70px;
+	width:107px;
+	background-image:url('../images/right_top_corner.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#WelcomeArea
+{
+	width:707px;
+}
+
+#WelcomeLeft
+{
+	height:55px;
+	width:215px;
+	background-image:url('../images/welcome_left.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#WelcomeMiddle
+{
+	height:55px;
+	width:260px;
+	background-image:url('../images/welcome.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#WelcomeRight
+{
+	height:55px;
+	width:232px;
+	background-image:url('../images/welcome_right.jpg');
+	background-repeat:no-repeat;
+	float:left;
+}
+
+/* main site styles. */
+.chartsArea
+{
+	float:left;
+	font-family:Tahoma, Arial;
+	font-size:10pt;
+	font-weight:bold;
+	padding:10px;
+	
+}
+
+#Menu
+{
+	text-align:right;
+	/* width:48%; */
+	height:40px;
+	padding-right:10px;
+	/*float:right;*/
+
+		
+	/*position:relative;
+	top:-27px;
+	left:10%;
+	
+	height:25px;*/
+}
+
+.Menu A
+{
+	font-family:Tahoma, Arial;
+	font-size:8pt;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:transparent;
+	padding:2px;
+	cursor:hand;
+	
+}
+
+.modalDivBg
+{
+	background-color:Gray;
+	filter:alpha(opacity=60);
+	opacity:0.7;
+}
+.modalPopupHeader
+{
+	padding-top:7px;
+	background-color:#091E3D;
+	color:#ffffff;
+	font-family: Tahoma;
+	font-size: 18px;
+	text-align:left;
+	font-weight:bold;
+	padding-bottom:7px;
+	border-bottom: solid 1px red;
+	padding-left:8px;
+	vertical-align:middle;
+	cursor:hand
+}
+
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.modalPopup {
+	background-color:#fffaf0;
+	border-width:3px;
+	border-style: solid;
+	border-right-color:#000000;
+	border-left-color:#000000;
+	border-bottom-color:#000000;
+	border-top-color:#000000;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:3px;
+	padding-top:0px;
+	cursor:default
+}
+
+#reportSelectionArea
+{
+	float:left;
+	height:450px;
+	width:275px;
+	padding-bottom:10px;
+	font-family:Tahoma, Arial;
+	font-size:10px;
+}
+
+#reportResultArea
+{
+	float:left;
+	width:510px;
+}
+#reportChartArea
+{
+	float:left;
+	width:510px;
+}
+
+.criteriaLabel
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	width:150px;
+	font-weight:bold;
+}
+.criteriaTextBox
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	width:125px;
+}
+
+.criteriaDropDown
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	width:150px;
+}
+
+.Label
+{
+    font-family:Tahoma, Arial;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.TextBox
+{
+    font-family:Tahoma, Arial;
+	font-size:10px;
+	border: solid 1px #000000;
+}
+
+.AltGridRowStyle
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	background-color:#DDF50F;
+}
+.GridRowStyle
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+}
+.GridHeaderStyle
+{
+	text-align:center;
+	font-family:Tahoma, Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:#5778A9;
+}
+
+.GridHeaderStyle A
+{
+	text-align:center;
+	font-family:Tahoma, Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+	text-decoration:underline;
+	/* background-color:#5778A9; */
+}
+
+#header
+{
+	height:80px;
+	width:100%;
+	background-image:url(../images/pageheaderbkgd.jpg); 
+	background-repeat:repeat-x;
+	padding-bottom:10px;
+	float:left;
+}
+.collapsePanel
+{
+	float:left;
+	text-align:left;
+}
+
+.collapseCenterPanel
+{
+	float:left;
+	text-align:left;
+	width:495px;
+	/*position:relative;
+	left:-200px; */
+}
+.collapseSurveyCenterPanel
+{
+	float:left;
+	text-align:left;
+	height:200px;
+	width:750px;
+	overflow-y:scroll;
+	
+	/*position:relative;
+	left:-200px; */
+}
+
+.collapseSurveyCenterPanel_NW_Military
+{
+	float:left;
+	text-align:left;
+	height:200px;
+	width:950px;
+	overflow-y:scroll;
+	
+	/*position:relative;
+	left:-200px; */
+}
+.collapseQuestionCenterPanel
+{
+	float:left;
+	text-align:left;
+	height:175px;
+	width:350px;
+	overflow-y:hidden;
+	/* overflow:scroll;*/
+	/*position:relative;
+	left:-200px; */
+}
+.collapseGraphPanel
+{
+	float:left;
+	text-align:left;
+	width:290px;
+	/*position:relative;
+	left:-200px; */
+}
+.collapsePanelHeader
+{
+	float:left;
+}
+
+.collapsePanelHeaderLeft
+{
+	float:left;
+	height:37px;
+	width:15px;
+	background-image:url(../images/pnlheadleftbkgd.jpg); 
+	background-repeat:no-repeat;
+}
+
+.collapsePanelHeaderTitle
+{
+	padding-top:6px;
+	padding-left:10px;
+	float: left; 
+	height:30px;
+	background-image:url(../images/pnlheadmidbkgd.jpg); 
+	background-repeat:repeat-x;
+	font-family:Arial,Tahoma;
+	font-size:10px;
+	font-weight:bold;
+	color:#383f49;
+	width:80%;
+}
+.collapsePanelHeaderDescription
+{
+	float:left; 
+	height:37px; 
+	background-image:url(../images/pnlheadmidbkgd.jpg); 
+	background-repeat:repeat-x;
+}
+
+.collapsePanelHeaderRight
+{
+	padding-top:7px;
+	float:left;
+	height:37px;
+	width:22px;
+	background-image:url(../images/pnlheadrightbkgd.jpg); 
+	background-repeat:no-repeat;
+}
+
+#reportArea
+{
+	width:100%;
+	float:left;
+	height:250px;
+}
+.gridLink a
+{
+	color:Blue;
+}
+#PageHeader
+{
+	float:left;
+	width:100%;
+	height:80px;
+	background-image:url(../images/pageheaderbkgd.jpg); 
+	background-repeat:repeat-x;
+}
+
+#searchCriteriaArea
+{
+	float:left;
+	width:190px;
+	padding-right:5px;
+}
+
+#surveyReportArea
+{
+	float:left;
+	width:100%;
+	/*height:300px;*/
+}
+
+#chart1Area
+{
+	float:left;
+	width:250px;
+	padding-right:5px;
+	/*height:300px; */
+}
+#chart2Area
+{
+	padding:5px;
+	float:left;
+	width:400px;
+	/*height:300px; */
+}
+
+#chart2Area_NW_Military
+{
+	padding:5px;
+	float:left;
+	width:590px;
+	/*height:300px; */
+}
+
+#chart3Area
+{
+	float:left;
+	width:200px;
+	/*height:300px;*/
+}
+
+#headerLogoArea
+{
+	float:left;
+	padding-left:15px;
+}
+.SubMenu
+{
+	padding:5px 5px 5px 5px;
+	background-color:#000000;
+	color:#ffffff;
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	text-align:left;
+}
+.pTag
+{
+	padding-left:10px;
+}
+
+.loginStyle,.loginButtonStyle
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.labelText
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	font-weight:bold;
+}
+
+#UserInfo
+{
+    display:block;
+	height:30px;
+	padding-top:10px;
+	text-align:right;
+	white-space:nowrap;
+	position:relative;
+	left:100%;
+}
+
+.userInfo
+{
+	font-family:Tahoma, Arial;
+	font-size:8pt;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+.questionDetailArea
+{
+	float:left;
+	width:240px;
+	/* padding-right:5px; */
+	padding-top:10px;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #ffff99;
+	color: black;
+	padding: 0px;
+	font-family: Tahoma, Arial;
+	font-size:10px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+	padding : 0px;
+	font-family: Tahoma, Arial;
+	font-size:10px;
+	
+}
+
+.autocomplete_completionListElement 
+{  
+	/* margin : 0px!important;
+	background-color : inherit;
+	color : windowtext;
+	border : buttonshadow; */
+	/* border-width : 1px;
+	border-style : solid; */
+	/* cursor : 'default';
+	overflow : auto;
+	height : 200px; 
+    text-align : left;*/ 
+    list-style-type : none;
+    z-index:200000;
+    font-family: Tahoma, Arial;
+	font-size:10px;
+}
+
+/* graph and grid control border styles.*/
+
+.topLeftCorner
+{
+	background-image:url(../images/ctrl_corner_tlc.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	width:14px;
+	height:13px;
+}
+
+.topRightCorner
+{
+	background-image:url(../images/ctrl_top_urc.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	width:18px;
+	height:13px;
+}
+
+.bottomLeftCorner
+{
+	background-image:url(../images/ctrl_border_blc.jpg);
+	background-repeat:no-repeat;
+	background-position:top right;
+	width:14px;
+	height:18px;
+}
+
+.bottomRightCorner
+{
+	background-image:url(../images/ctrl_bottom_lrc.jpg);
+	background-repeat:no-repeat;
+	background-position:top right;
+	width:18px;
+	height:18px;
+}
+
+.topBorder
+{
+	background-image:url(../images/ctrl_border_top.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	height:13px;
+}
+
+.gridHeader
+{
+	font-family:Tahoma, Arial;
+	font-size:12px;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+
+.bottomBorder
+{
+	background-image:url(../images/ctrl_border_bottom.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	height:18px;
+}
+
+.leftBorder
+{
+	background-image:url(../images/ctrl_border_left.jpg);
+	background-repeat:repeat-y;
+	background-position:top;
+	width:14px;
+}
+
+.rightBorder
+{
+	background-image:url(../images/ctrl_border_right.jpg);
+	background-repeat:repeat-y;
+	
+	width:18px;
+}
+
+.ReportAltGridRowStyle
+{
+	font-family:Tahoma, Arial;
+	font-size:10px;
+	background-color:#ffffff;
+}
+.ReportGridRowStyle
+{
+	font-family:Tahoma, Arial;
+	background-color:Silver;
+	font-size:10px;
+}
+.ReportGridHeaderStyle
+{
+	text-align:center;
+	font-family:Tahoma, Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:Gray;
+}
+
+.DashboardCalendar .ajax__calendar_container 
+{
+	z-index:10000;
+
+}
+
+#dashBoardGraph1
+{
+    position:absolute;
+    left:0px;
+    top:130px;
+}
+
+#dashBoardGraph2
+{
+    position:absolute;
+    left:460px;
+    top:465px;
+}
+
+#dashBoardGraph3
+{
+    position:absolute;
+    left:900px;
+    top:130px;
+}
+
+#dashBoardGraph4
+{
+    position:absolute;
+    left:0px;
+    top:130px;
+}
+
+#dashBoardGrid1
+{
+    position:absolute;
+    left:460px;
+    top:135px;
+}
+
+
+
+#dashBoardGraph1_NW_Military
+{
+    position:absolute;
+    left:0px;
+    top:375px;
+    display:none;
+}
+
+.questionDetailArea_NW_Military
+{
+	float:left;
+	width:400px;
+	height:220px;
+	/* padding-right:5px; */
+	padding-top:10px;
+}
+
+#dashBoardGraph2_NW_Military
+{
+    position:absolute;
+    left:430px;
+    top:375px;
+    display:none;
+}
+
+#dashBoardGraph3_NW_Military
+{
+    position:absolute;
+    left:865px;
+    top:130px;
+}
+
+#dashBoardGraph4_NW_Military
+{
+    position:absolute;
+    left:0px;
+    top:330px;
+}
+
+#comboGraphByMonth_NW_Military
+{
+    position:absolute;
+    left:505px;
+    top:130px;
+}
+
+#comboGraphByBookerNo_NW_Military
+{
+    position:absolute;
+    left:505px;
+    top:385px;
+}
+
+#dashBoardGrid1_NW_Military
+{
+    position:absolute;
+    left:5px;
+    top:135px;
+    width:500px;
+}
+
+#dashBoardGraph4_Atlas_Military
+{
+    position:absolute;
+    left:10px;
+    top:402px;
+}
+
+#comboGraphByMonth_Atlas_Military
+{
+    position:absolute;
+    left:415px;
+    top:270px;
+}
+
+#comboGraphByBookerNo_Atlas_Military
+{
+    position:absolute;
+    left:415px;
+    top:467px;
+}
+
+#dashBoardGrid1_Atlas_Military
+{
+    position:absolute;
+    left:418px;
+    top:135px;
+    
+}
+
+#dashBoardGraph3_Atlas_Military
+{
+    position:absolute;
+    left:760px;
+    top:130px;
+}
+
+#dashBoardGraph1_Atlas_Military
+{
+    position:absolute;
+    left:10px;
+    top:130px;
+}
+
+
+
+.kpiComments
+{
+    width:350px;
+    height:105px;
+    background-image:url(../images/comments_background.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:absolute;
+    
+}
+
+
+.dashboard-calendar .ajax__calendar_container
+{
+background-color:#000; /* black */
+
+border:solid 1px #000;
+z-index:999999;
+}
+.dashboard-calendar .ajax__calendar_title
+{
+background-color:#000; /* black */
+height:20px;
+color:#9f0; /*lime green.*/
+}
+.dashboard-calendar .ajax__calendar_prev,
+.dashboard-calendar .ajax__calendar_next
+{
+    background-color:#000; /* black */
+    height:20px;
+    width:20px;
+    color:#fff;
+}
+.dashboard-calendar .ajax__calendar_today
+{
+background-color:#000; /* black */
+color:#ffffff;
+height:20px;
+}
+.dashboard-calendar .ajax__calendar_days table thead tr td
+{
+background-color:#000; /* dark yellow */
+color:#ccc;
+}
+.dashboard-calendar .ajax__calendar_day
+{
+color:#fff; /* normal day - lime green */
+}
+
+.dashboard-calendar .ajax__calendar_month
+{
+color:#fff; /* normal month - white */
+}
+
+.dashboard-calendar .ajax__calendar_year
+{
+color:#fff; /* normal year - white */
+}
+.dashboard-calendar .ajax__calendar_other .ajax__calendar_day
+{
+color:#666; /* day not actually in this month - lighter gray color */
+}
+
+.dashboard-calendar .ajax__calendar_today 
+{
+    color:#99ff00; /*lime green.*/
+}
+
+.InvoiceDashboardGrid1
+{
+    margin-top:45px;
+    width:350px;
+    float:left;
+}
+
+.InvoiceDashboardGrid2
+{
+    margin-top:45px;
+    width:350px;
+    float:left;
+}
+
+.InvoiceDashboardGrid3
+{
+    margin-top:45px;
+    width:350px;
+    float:left;
+}
+
+#headerSection
+{
+	height:70px;
+	width:100%;
+	background-image:url(../images/pageheaderbkgd.jpg); 
+	background-repeat:repeat-x;
+	padding-bottom:10px;
+	/* float:left; */
+}
+
+#menuSection
+{
+    width:100%;
+    background-color:#081D3C;
+    height:31px;
+}
+
+.userNameSection
+{
+	float:right;
+	display:inline;
+	margin:10px 10px 10px 0px;
+}
+
+

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SurveyDetail>
+	<Detail>
+		<ImportId>141</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Surveyor</Question>
+		<Answer>VG</Answer>
+		<QuestionId>8</QuestionId>
+		<Question1>Surveyor</Question1>
+		<QuestionDescription>This is the person who came to your home or did a phone survey to inventory your household goods and determine what services were required.</QuestionDescription>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>142</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Customer Service Representative (CSR)</Question>
+		<Answer>VG</Answer>
+		<QuestionId>3</QuestionId>
+		<Question1>Customer Service Representative (CSR)</Question1>
+		<QuestionDescription>This is the person who was your main contact throughout the move, informed and guided you on moving procedures, and coordinated your move dates.</QuestionDescription>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>143</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Driver at Origin</Question>
+		<Answer>VG</Answer>
+		<QuestionId>5</QuestionId>
+		<Question1>Driver at Origin</Question1>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>144</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Packing &amp; Loading Crew</Question>
+		<Answer>G</Answer>
+		<QuestionId>7</QuestionId>
+		<Question1>Packing &amp; Loading Crew</Question1>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>145</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Driver at Destination</Question>
+		<Answer>VG</Answer>
+		<QuestionId>4</QuestionId>
+		<Question1>Driver at Destination</Question1>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>146</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Unpacking &amp; Unloading Crew</Question>
+		<Answer>G</Answer>
+		<QuestionId>9</QuestionId>
+		<Question1>Unpacking &amp; Unloading Crew</Question1>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>148</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Was the crew in uniform at origin?</Question>
+		<Answer>YES</Answer>
+		<QuestionId>10</QuestionId>
+		<Question1>Was the crew in uniform at origin?</Question1>
+		<Answer1>Yes,No</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>147</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Was the Driver in uniform at origin?</Question>
+		<Answer>YES</Answer>
+		<QuestionId>11</QuestionId>
+		<Question1>Was the driver in uniform at origin?</Question1>
+		<Answer1>Yes,No</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>150</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Was the crew in uniform at destination?</Question>
+		<Answer>YES</Answer>
+		<QuestionId>13</QuestionId>
+		<Question1>Was the crew in uniform at destination?</Question1>
+		<Answer1>Yes,No</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>149</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Was the driver in uniform at destination?</Question>
+		<Answer>YES</Answer>
+		<QuestionId>14</QuestionId>
+		<Question1>Was the driver in uniform at destination?</Question1>
+		<Answer1>Yes,No</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>151</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Claims</Question>
+		<Answer>NO</Answer>
+		<QuestionId>1</QuestionId>
+		<Question1>Claims</Question1>
+		<QuestionDescription>Were any items lost or damaged during your move? </QuestionDescription>
+		<Answer1>Yes,No</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>152</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Overall moving experience with Nelson Westerberg</Question>
+		<Answer>VG</Answer>
+		<QuestionId>6</QuestionId>
+		<Question1>Overall moving experience with Nelson Westerberg</Question1>
+		<Answer1>EX,VG,G,F,P</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>153</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Would you use the services of Nelson Westerberg again</Question>
+		<Answer>YES</Answer>
+		<QuestionId>12</QuestionId>
+		<Question1>Would you use the services of Nelson Westerberg again</Question1>
+		<Answer1>Yes,No,Not Sure</Answer1>
+	</Detail>
+	<Detail>
+		<ImportId>154</ImportId>
+		<CompanyId>1</CompanyId>
+		<DeliveryDate>2008-01-08T00:00:00-06:00</DeliveryDate>
+		<CSCNo>209803</CSCNo>
+		<LastName>VITEK,</LastName>
+		<FirstName>JULIE   MARK</FirstName>
+		<OriginAgent>1362</OriginAgent>
+		<DestinationAgent>2135</DestinationAgent>
+		<DriverName>5522 MCCOLLEY</DriverName>
+		<ClientName>NEI GLOBAL RELOCATION</ClientName>
+		<CustomerServiceRep>3031 ATKINSON</CustomerServiceRep>
+		<NationalAcctNo>311697</NationalAcctNo>
+		<LocationCode>3</LocationCode>
+		<BookerNo>1523</BookerNo>
+		<Question>Comments</Question>
+		<Answer>MOVE WENT WELL, BUT THE CREW WASN'T UP TO THEIR EXPECTATIONS.  DRIVER WAS VERY ACCOMODATING AND FRIE</Answer>
+		<QuestionId>2</QuestionId>
+		<Question1>Comments</Question1>
+	</Detail>
+</SurveyDetail>

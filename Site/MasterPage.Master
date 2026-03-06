@@ -1,0 +1,359 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="AISReports.Site.MasterPage" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" >
+    <!--[if IE]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <!--<script type="text/javascript" src="../script/jquery-1.6.2.min.js"></script>-->
+    <!--<script type="text/javascript" src="../script/jquery-1.9.1.js"></script>-->
+    <script type="text/javascript" src="../script/jquery-1.11.2.min.js"></script>
+    <!--<script type="text/javascript" src="../script/jquery-1.12.3.min.js"></script>-->
+    <script type="text/javascript" src="../script/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.js"></script>
+    <script type="text/javascript" src="../script/jquery.tabSlideOut.v1.3.js"></script>
+    <link rel="stylesheet" href="../fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="../script/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--<link rel="stylesheet" href="../css/dataTables.colReorder.css" type="text/css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="../script/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="../script/DataTables/datatables.min.js"></script>
+     <script type="text/javascript" src="../script/dataTables.fnGetColumnIndex.js"></script>-->
+    <%--<link rel="stylesheet" href="../css/dark-hive/jquery-ui-1.9.0.custom.css" type="text/css" media="screen" />--%>
+   
+    <!--<script type="text/javascript" src="../script/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../script/dataTables.fnReloadAjax.js"></script>
+    <script type="text/javascript" src="../script/dataTables.fnGetColumnIndex.js"></script>
+    <script type="text/javascript" src="../script/dataTables.fnHideColumns.js"></script>
+    <script type="text/javascript" src="../script/dataTables.colReorder.min.js"></script>
+    <script type="text/javascript" src="../script/dataTables.fixedHeader.js"></script>
+    <script type="text/javascript" src="../script/dataTables.scroller.min.js"></script>
+    <script type="text/javascript" src="../script/TableTools.min.js"></script>
+    <script type="text/javascript" src="../script/ZeroClipboard.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.jqueryui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/dataTables.jqueryui.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.jqueryui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.3.3/css/colReorder.dataTables.min.css"/>
+    <style type="text/css">
+        .dataTables_scroll {
+            overflow: auto;
+        }
+
+        .masterpage-footer{
+            font-family:ModerneSans;
+            text-align:center;
+        }
+
+        .masterpage-footer span{
+            padding:7px;
+        }
+
+    </style>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.jqueryui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.3.3/js/dataTables.colReorder.min.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="../script/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="../script/DataTables/datatables.min.js"></script>-->
+    <!--<link href="../Content/DataTables/css/demo_table_jui_20140226001.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/TableTools_JUI.css" type="text/css" />-->
+    <%--<link href="../css/master-styles.css" rel="stylesheet" type="text/css" />--%>
+    <!--<link href="../css/menu.css" rel="stylesheet" type="text/css" />-->
+	<script type="text/javascript" src="../script/hoverIntent.js"></script>
+    <script type="text/javascript" src="../script/json3.min.js"></script>
+   <%-- <script type="text/javascript" src="../script/jquery.ui.position.js"></script>--%>
+    <script type="text/javascript" src="../script/jquery.contextMenu.js"></script>
+    <link rel="stylesheet" href="../css/jquery.contextMenu.css" type="text/css" />
+    <!--<script src="../script/zingchart.jquery.min.js"></script>
+    <script src="../script/zingchart.min.js"></script>-->
+    <script src="../script/fusioncharts.js?123"></script>
+    <script src="../script/themes/fusioncharts.theme.ais.js"></script>
+    <script src="../script/themes/fusioncharts.theme.fint.js"></script>
+    <script src="../script/themes/fusioncharts.theme.convergent.js"></script>
+    <script src="../script/themes/fusioncharts.theme.carbon.js"></script>
+    <script src="../script/fusioncharts-jquery-plugin.js"></script>
+    <script type="text/javascript" src="../script/accounting.min.js"></script>
+    <script type="text/javascript" src="../script/jquery.mask.js"></script>
+<!--    <script src="../script/moment.min.js"></script>
+    <script src="../script/datetime-moment.js"></script>-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+    <script type="text/javascript">
+        var url = "";
+                        
+        if(window.document.location.host=="localhost")  {
+            url="localhost/AIS";
+        }
+        else {
+            url="reports.aismgt.com";
+        };
+
+        // initialize plugins
+        $(function () {
+            $.fn.dataTable.moment('MM/DD/YYYY');
+            $(".btn-style").button();
+            $(":submit").button();
+
+            try {
+
+                if ($('.slide-out-div').length > 0) {
+                    $('.slide-out-div').tabSlideOut({
+                        tabHandle: '.handle',                     //class of the element that will become your tab
+                        pathToTabImage: '../images/search-criteria.png', //path to the image for the tab //Optionally can be set using css
+                        imageHeight: '170px',                     //height of tab image           //Optionally can be set using css
+                        imageWidth: '43px',                       //width of tab image            //Optionally can be set using css
+                        tabLocation: 'left',                      //side of screen where tab lives, top, right, bottom, or left
+                        speed: 300,                               //speed of animation
+                        action: 'click',                          //options: 'click' or 'hover', action to trigger animation
+                        topPos: '200px',                          //position from the top/ use if tabLocation is left or right
+                        leftPos: '20px',                          //position from left/ use if tabLocation is bottom or top
+                        fixedPosition: false                      //options: true makes it stick(fixed position) on scroll
+                    });
+                }
+
+                //                $("#nav a").each(function () {
+                //                    var url = $(this).attr("href");
+
+                //                    if (url.indexOf("rtype=bdefhc") != -1 ||
+                //                    url.indexOf("rtype=bdef") != -1 ||
+                //                    url.indexOf("rtype=csr") != -1 ||
+                //                    url.indexOf("rtype=bouthc") != -1 ||
+                //                    url.indexOf("rtype=bout") != -1 ||
+                //                    url.indexOf("TransportationData.aspx") != -1) {
+                //                        $(this).parent().hide();
+                //                    }
+
+                //                });
+            }
+            catch (e)
+            { }
+
+            uid = $("#ctl00_lblUID").text(); //$(".uid").text();
+            cid = $("#ctl00_lblCID").text(); //$(".cid").text();
+            utype = $(".utype").text();
+            consolidated = $("#ctl00_lblConsolidated").text(); //$(".consolidated-id").text();
+
+            if (cid === "10099" || cid === "10103") {
+                var welcomeName = $(".header-userinfo").text();
+                $(".header-userinfo").text(welcomeName.replace("Welcome", "Welcome, "));
+            }
+
+            HideMenuItemsByUser();
+
+            try {
+                $(".lookup-textbox").each(function () {
+
+                    var fieldName = $(this).attr("data-field-name");
+                    var tableType = $(this).attr("data-table-type");
+
+                    if (tableType.toLowerCase() == "cms_picklist") {
+                        $(this).autocomplete({
+                            source: "../ListHandler.ashx?cid=" + cid + "&uid=" + uid + "&fn=" + fieldName + "&tn=" + tableType + "&pl=true&qt=pick&qid=" + S4(),
+                            minLength: 1
+                        });
+                    }
+                    else {
+                        $(this).autocomplete({
+                            source: "../ListHandler.ashx?cid=" + cid + "&uid=" + uid + "&fn=" + fieldName + "&tn=" + tableType + "&qt=lookup&qid=" + S4(),
+                            minLength: 1
+                        });
+                    }
+
+                });
+            }
+            catch (e) {
+            }
+
+            try {
+                $(".date-textbox").each(function () {
+                    $(this).datepicker({
+                        changeMonth: true,
+                        changeYear: true
+                    });
+                });
+            }
+            catch (e) {
+            }
+
+            try {
+
+                $(".lookup-combobox").each(function () {
+
+                    var fieldName = $(this).attr("data-field-name");
+                    var tableType = $(this).attr("data-table-type");
+
+                    if (tableType.toLowerCase() == "question") {
+                        $(this).hide();
+                        $(this).prev().hide();
+                    }
+
+                    if (tableType.toLowerCase() == "cms_picklist") {
+                        $(this).autocomplete({
+                            source: "../ListHandler.ashx?cid=" + cid + "&uid=" + uid + "&fn=" + fieldName + "&tn=" + tableType + "&pl=true&qt=pick&qid=" + S4(),
+                            minLength: 0
+                        }).click(function () {
+                            $(this).autocomplete("search");
+                        });
+                    }
+                    else {
+                        $(this).autocomplete({
+                            source: "../ListHandler.ashx?cid=" + cid + "&uid=" + uid + "&fn=" + fieldName + "&tn=" + tableType + "&qt=lookup",
+                            minLength: 0,
+                            select: function (event, ui) {
+                                $(this).autocomplete("close");
+                                if (fieldName.toLowerCase() == "reportname") {
+                                    setReportOnlyFields(ui.item.value);
+                                }
+                            }
+                        }).click(function () {
+                            $(this).autocomplete("search");
+                        });
+                    }
+                });
+            }
+            catch (e) {
+                alert("combobox error: " + e.Message);
+            }
+
+            setSelectedMenu();
+            EnableCopyrightFooter();
+        });
+
+        function HideMenuItemsByUser() {
+            $("#nav > li").each(function () {
+                var aTag = $(this).find("a").first().text();
+
+                if (aTag != "Logout" && aTag !="Score Card" && cid=="10108" && (uid=="466" || uid=="467")) {
+                    $(this).hide();
+                }
+            });
+        }
+
+        function setSelectedMenu() {
+
+            var path = window.location.pathname;
+            var currentPage =path.substring(path.lastIndexOf('/') + 1).toLowerCase();
+
+            $("#nav a").each(function () {
+                if ($(this).attr("href") != undefined) {
+                    var pageName = $(this).attr("href").split("?")[0].toLowerCase();
+
+                    if (currentPage == pageName) {
+                        $(this).parent().attr("class", "current");
+                    }
+                }
+            });
+            //alert();
+        }
+
+        function showDetails(url) {
+            $.fancybox({
+                'width': 680,
+                'height': 650,
+                'autoScale': false,
+                'transitionIn': 'fade',
+                'transitionOut': 'fade',
+                'href': url,
+                'type': 'iframe'
+            });
+        }
+
+        function PrintScreenToPDF() {
+            var NewJSONDBQuery = {};
+
+            NewJSONDBQuery.FieldList = "CompanyID~" + cid + "|UserID~" + uid + "|ReportHtml~" + $("div > .user-control-widget:nth-child(2)").html();
+            NewJSONDBQuery.TableName = "cms_ReportRequests";
+            NewJSONDBQuery.KeyFieldName = "pkReportRequestID";
+            NewJSONDBQuery.QueryType = "add";
+
+            var DTO = { 'NewJSONDBQuery': NewJSONDBQuery };
+            console.log(JSON.stringify(DTO));
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "../AISWS.asmx/JSONDBQuery",
+                data: JSON.stringify(DTO),
+                dataType: "json",
+                beforeSend: function () { },
+                success: function (data) {
+                    $("#pdfDownloadFrame").attr("src", "../ConvertHtmlToPDF.aspx?rid=" + data.d.KeyFieldValue);
+                }
+            });
+        }
+
+        function EnableCopyrightFooter() {
+            if (cid === "10099" || cid === "10103") {
+                $("#copyrightfooter").show();
+            }
+        }
+    </script>
+
+    <!--[if !IE 7]>
+	    <style type="text/css">
+		    #master-wrapper {display:table;height:100%}
+	    </style>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <cc1:ToolkitScriptManager runat="server" ID="ScriptManager1" EnablePartialRendering="true">
+        <Services>
+            <asp:ServiceReference Path="../AISWS.asmx" />
+        </Services>
+    </cc1:ToolkitScriptManager>
+        <div id="wrap" class="content-background">
+            <div id="master-main" class="clearfix">
+                <div class="header-blue-bar"></div>
+                <div class="master-header">
+                    <div class="master-header-left">
+                        <asp:image runat="server" id="imgLogo" CssClass="header-logo" ImageUrl="~/images/logo_noback.png"  />
+                        <asp:Label runat="server" ID="lblHeaderText" CssClass="header-text" Text="AIS Reporting" />
+                        <asp:Label runat="server" ID="lblSubHeaderText" CssClass="sub-header-text-left" />
+                    </div>
+                    <div class="master-header-right">
+                        <asp:Label runat="server" ID="lblHeaderTextRight" CssClass="header-text-right" />
+                        <asp:Label runat="server" ID="lblSubHeaderTextRight" CssClass="sub-header-text-right" />
+                        <asp:Label runat="server" ID="lblSelectedMenuItem" CssClass="header-selected-menu-item" />
+                        <b><asp:Label runat="server" ID="lblUserInfo" CssClass="header-userinfo" /></b>
+                        <asp:Label runat="server" ID="lblCompanyName" Text="Demo Site" CssClass="header-companyinfo"/>
+                    </div>
+        	    </div>
+                <div class="master-menu">
+                    <ul id="nav">
+                        <asp:Literal runat="server" ID="litMenu" />
+		            </ul>
+                    <br />
+                </div>
+                <div>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" OnInit="ContentPlaceHolder1_Init">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <asp:Label runat="server" ID="lblUID" CssClass="uid" style="display:none;" />
+                <asp:Label runat="server" ID="lblCID" CssClass="cid" style="display:none;" />
+                <asp:Label runat="server" ID="lblUType" CssClass="utype" style="display:none;" />
+                <asp:Label runat="server" ID="lblConsolidated" CssClass="consolidated-id" style="display:none;" />
+                <asp:Label runat="server" ID="lblChartStyle" CssClass="site-chart-style" style="display:none;" />
+                <span id="site-message-section" style="display:block; color:#fff;"></span>
+            </div>
+        </div>
+        <iframe id="pdfDownloadFrame" width="0" height="0" frameborder="0" style="display:none;"></iframe>
+        <div id="copyrightfooter" class="masterpage-footer" style="display:none;">
+            <span>&copy;Convergent Claim Services <% =DateTime.Now.Year.ToString() %>. All Rights Reserved</span>
+        </div>
+    </form>
+</body>
+</html>

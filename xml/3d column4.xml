@@ -1,0 +1,53 @@
+<chart>
+<chart_type>stacked 3d column</chart_type>
+
+ <chart_data>
+      <row>
+         <null/>
+        <string>Questions</string>
+      </row>
+      <row>
+         <string>Surveyor</string>
+         <number>3.8</number>
+      </row>
+      <row>
+         <string>CSR</string>
+         <number>3.6</number>
+      </row>
+      <row>
+         <string>Origin</string>
+         <number>3.5</number>
+      </row>
+       <row>
+         <string>Packing &amp; Unpacking</string>
+         <number>3.3</number>
+       </row>
+       <row>
+         <string>Destination</string>
+         <number>3.1</number>
+       </row>
+   </chart_data>
+   
+   <!--<chart_type>
+      <string>line</string>
+      <string>column</string>
+      <string>column</string>
+   </chart_type>-->
+
+<chart_type>bar</chart_type>
+
+
+
+
+
+   
+   
+   <!-- explode the 1st and 3rd wedges -->
+   <!--<series_explode>
+      <number>20</number>
+      <number>0</number>
+      <number>70</number>
+   </series_explode>-->
+
+
+</chart>

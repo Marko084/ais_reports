@@ -1,0 +1,5 @@
+﻿body{ margin:0; padding:0; line-height: 1.5em; }
+
+.content-left{ width:49% !important; float:left;}
+.content-right{width:49% !important;float:right;}
+.content-main {display:none !important;}

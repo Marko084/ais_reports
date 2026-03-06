@@ -1,0 +1,40 @@
+﻿.gridview-header {
+    background-color: #184aff;
+    color: #ffffff;
+    font-size: 12px;
+}
+        
+.gridview-row
+{
+    font-size:12px;
+}
+.gridview-alt-row
+{
+    font-size:12px;
+}
+
+.gridview-first-column-body {
+	
+}
+
+.gridview-first-column-footer {
+	
+}
+
+.report-title
+{
+    font-size: 24px;
+    font-family:Calibri, Arial;
+}
+
+.report-sub-title 
+{
+     font-size: 18px;
+    font-family:Calibri, Arial;
+}
+
+.report-parameters 
+{
+    font-size: 16px;
+    font-family:Calibri, Arial;
+}

@@ -1,0 +1,44 @@
+﻿.report-body {
+    margin-left:20px;
+    background-color: #ffffff !important;
+}
+
+.report-section {
+    background-color: #ffffff !important;
+    border:1px solid #000;
+}
+
+.group-header-row td {
+    font-weight: bold;
+    background-color: #f2f2f2 !important;
+}
+
+.ranking-report-section td:nth-child(4), td:nth-child(5) {
+    text-align: center;
+}
+
+.ranking-report-section th, .matrix-report-section th {
+    background-color: #e0e0e0;
+}
+
+.matrix-report-section td{
+    text-align:center;
+}
+
+.matrix-totals-row {
+    background-color: #e0e0e0;
+    font-weight:bold;
+}
+
+.empty-row td {
+    border-left: 1px solid #fff !important;
+    border-right: 1px solid #fff !important;
+}
+
+
+/*{
+    font-weight: bold;
+    background-color: #2D508F;
+    color: #ffffff;
+    margin:3px;
+}*/

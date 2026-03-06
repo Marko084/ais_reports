@@ -1,0 +1,56 @@
+<chart>
+<chart_type>stacked 3d column</chart_type>
+
+ <chart_data>
+      <row>
+         <null/>
+         <string>2001</string>
+         <string>2002</string>
+         <string>2003</string>
+         <string>2004</string>
+      </row>
+      <row>
+         <string>Region A</string>
+         <number>5</number>
+         <number>10</number>
+         <number>30</number>
+         <number>63</number>
+      </row>
+      <row>
+         <string>Region B</string>
+         <number>40</number>
+         <number>20</number>
+         <number>65</number>
+         <number>90</number>
+      </row>
+      <row>
+         <string>Region C</string>
+         <number>56</number>
+         <number>35</number>
+         <number>40</number>
+         <number>90</number>
+      </row>
+   </chart_data>
+   
+   <!--<chart_type>
+      <string>line</string>
+      <string>column</string>
+      <string>column</string>
+   </chart_type>-->
+
+<chart_transition type='slide_left' delay='.5' duration='0.5' order='series' />
+<chart_type>Line</chart_type>
+
+
+
+   
+   
+   <!-- explode the 1st and 3rd wedges -->
+   <!--<series_explode>
+      <number>20</number>
+      <number>0</number>
+      <number>70</number>
+   </series_explode>-->
+
+
+</chart>

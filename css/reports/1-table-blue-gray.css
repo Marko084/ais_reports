@@ -1,0 +1,112 @@
+﻿.gridview-header
+{
+    /* display:none; */
+    font-weight:bold;
+    font-size:20pt;
+    font-family: Calibri, Arial, Verdana;
+    color:#fff;
+    background-color:#2471be;
+    /*text-align:left;*/
+     /* padding:10px; */
+    white-space:nowrap;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    border-left: 0px none #2471be;
+    border-right: 0px none #2471be;
+}
+        
+.gridview-row
+{
+    font-size:18pt;
+     /* padding:10px; 
+    color:#444444; */
+    text-align:center;
+    white-space:nowrap;
+    background-color:#d6d6d6;
+    border: 1px solid #d6d6d6;
+}
+
+.gridview-alt-row
+{
+   font-size:18pt;
+   /* padding:10px;
+   color:#444444; */
+   text-align:center;
+   white-space:nowrap;
+}
+.gridview-table 
+{
+    margin-top:15px;
+    width:100%;
+    border-collapse:collapse;
+    border:1px solid #fff;
+}
+
+#report-section br { display:none;}
+
+.gridview-first-column-body {
+  /* text-align:left;
+  white-space:nowrap; */
+}
+
+.gridview-first-column-body a{
+  color:#000;
+}
+
+.gridview-first-column-body td 
+{
+    /* padding-left:30px; */
+}
+
+.gridview-first-column-footer {
+	
+}
+
+.gridview-footer 
+{
+    display: none;
+    /* border-bottom: 1px solid #000; */
+}
+
+.report-header 
+{
+    padding:10px;
+    background-color:#2471be;
+    color:#ffffff;
+    height:105px;
+}
+
+.report-title
+{
+    font-size: 32pt;
+    font-family:Calibri, Arial, Verdana;
+}
+
+.report-sub-title 
+{
+    font-size: 18px;
+    font-family:Calibri, Arial;
+}
+
+.report-parameters 
+{
+    font-size: 16px;
+    font-family:Calibri, Arial;
+}
+
+.report-spacer {
+    background-color:#827970;
+    height:25px;
+    display:block;
+}
+
+.grid-labels 
+{
+    font-size:22pt;
+    font-family:Calibri, Arial;
+    font-weight:bold;
+    display:block;
+    padding:10px 10px 10px 0px;
+    
+}
+

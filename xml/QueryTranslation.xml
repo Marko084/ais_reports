@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Queries>
+  <Query name="1000">GetQuestionData</Query>
+  <Query name="1001">GetYesNoData</Query>
+</Queries>
